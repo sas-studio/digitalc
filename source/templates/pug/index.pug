@@ -9,12 +9,12 @@ html
     body
 
         #fullpage
-            .section.section--1
+            .section.section--1#top-section
                 .n-main
                     .n-s1
                         svg.n-logo
                             use(xlink:href="images/sprite.svg#logo")
-                    a(href="#firstPage").n-slides-link.n-slides-link--white
+                    a(href="#firstPage").n-slides-link.n-slides-link--white#firt-scroll
                         svg.n-slides-link__arrow
                             use(xlink:href="images/sprite.svg#arrow-down")
             .section.section--2
@@ -429,10 +429,18 @@ html
 
         script.
             $(document).ready(function() {
-                $('#fullpage').fullpage({
-                    anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
-                    //responsiveHeight: 1279,
-                    scrollOverflow: true,
 
-                });
+                if ($(document).width() > 1279) {
+                    $('#fullpage').fullpage({
+                        anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+                        //responsiveHeight: 1279,
+                        scrollOverflow: true,
+                    });
+                }
+                else {
+                    $('#firt-scroll').on('click', function() {
+                        $('html, body').animate({ scrollTop: $('#top-section').outerHeight() }, 700);
+                    });
+                }
+
             });

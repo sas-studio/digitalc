@@ -9,13 +9,13 @@
   </head>
   <body>
     <div id="fullpage">
-      <div class="section section--1">
+      <div class="section section--1" id="top-section">
         <div class="n-main">
           <div class="n-s1">
             <svg class="n-logo">
               <use xlink:href="images/sprite.svg#logo"></use>
             </svg>
-          </div><a class="n-slides-link n-slides-link--white" href="#firstPage">
+          </div><a class="n-slides-link n-slides-link--white" href="#firstPage" id="firt-scroll">
             <svg class="n-slides-link__arrow">
               <use xlink:href="images/sprite.svg#arrow-down"></use>
             </svg></a>
@@ -340,12 +340,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
     <script>
       $(document).ready(function() {
-          $('#fullpage').fullpage({
-              anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
-              //responsiveHeight: 1279,
-              scrollOverflow: true,
       
-          });
+          if ($(document).width() > 1279) {
+              $('#fullpage').fullpage({
+                  anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+                  //responsiveHeight: 1279,
+                  scrollOverflow: true,
+              });
+          }
+          else {
+              $('#firt-scroll').on('click', function() {
+                  $('html, body').animate({ scrollTop: $('#top-section').outerHeight() }, 700);
+              });
+          }
+      
       });
     </script>
   </body>
