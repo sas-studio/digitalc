@@ -1,0 +1,19 @@
+.n-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 140px;
+
+    &__copyright {
+        color: white;
+        font: {
+            size: 1.125em;//18px;
+        }
+        opacity: .6;
+
+        &--grey {
+            color: #b7bfc4;
+        }
+    }
+}

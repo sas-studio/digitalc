@@ -1,15 +1,438 @@
-include ./helpers/mixins
-
 doctype html
 html
     head
         title PageTitle
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css')
         link(rel="stylesheet" href='style/style.css')
+        link(rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css')
     body
-        +select('c-select', ['some1', 'some2', 'some3', 'some4'])
 
+        #fullpage
+            .section.section--1
+                .n-main
+                    .n-s1
+                        svg.n-logo
+                            use(xlink:href="images/sprite.svg#logo")
+                    a(href="#firstPage").n-slides-link.n-slides-link--white
+                        svg.n-slides-link__arrow
+                            use(xlink:href="images/sprite.svg#arrow-down")
+            .section.section--2
+                .n-main
+                    .n-s2
+                        header(class=`n-header`)
+
+                            svg.n-header__logo.adaptive-hidden
+                                use(xlink:href="images/sprite.svg#logo-small")
+                            svg.n-header__logo.desktop-hidden
+                                use(xlink:href="images/sprite.svg#logo-grey")
+
+                            nav.n-header__nav.adaptive-hidden
+                                a(href="").n-header__nav-link Платформа
+                                a(href="").n-header__nav-link Решения
+                                a(href="").n-header__nav-link Почему мы
+                                a(href="").n-header__nav-link Компания
+                                a(href="").n-header__nav-link Ресурсы
+
+                            a(href="").icon-link.n-header__tel.n-header__icon
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#phone")
+
+                            a(href="").icon-link.n-header__profile.n-header__icon
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#human")
+
+                            a(href="").icon-link.n-header__ytube.desktop-hidden.n-header__icon
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
+
+                            a(href="").n-header__btn.adaptive-hidden
+                                svg
+                                    use(xlink:href="images/sprite.svg#pen")
+                                span Демо
+
+                            .n-header__hamburger
+                                a(href="").icon-link.n-header__icon
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#hamburger")
+
+                        img(src="images/eye.png", alt="").desktop-hidden
+
+                        .n-content.n-s2__content
+
+                            .n-s2__title
+                                div.n-inner-text
+                                    | Digital
+                                    br
+                                    | Contact
+                                    span .
+                            .n-s2__subtitle
+                                div.n-inner-text
+                                    | Первая платформа
+                                    br
+                                    | автоматизации маркетинга
+                                    br
+                                    | с искусственным интеллектом
+                            .n-s2__text
+                                div.n-inner-text.n-s-text Мы рядом с клиентом на всех этапах его путешествия, мы общаемся с миллионами, но с каждым один на один и предоставляем бизнесу возможности, которых до этого не существовало
+
+                        footer(class=`n-footer`).adaptive-hidden
+                            .n-socials
+                                a(href="").icon-link.n-socials__link.n-socials__link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#vk")
+                                a(href="").icon-link.n-socials__link.n-socials__link--grey.icon-link--fb
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#fb")
+                                a(href="").icon-link.n-socials__link.n-socials__link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#youtube")
+                            .n-footer__copyright
+                                | © 2008-2017 Digital Contact
+
+                    a(href="#secondPage").n-slides-link.n-slides-link--white.adaptive-hidden
+                        svg.n-slides-link__arrow
+                            use(xlink:href="images/sprite.svg#arrow-down")
+
+                    .n-pagnav.n-pagnav--whitegrey.adaptive-hidden
+                        a(href="#firstPage").n-pagnav__active 01
+                        a(href="#secondPage").n-pagnav__circle
+                        a(href="#thirdPage").n-pagnav__circle
+                        a(href="#fourthPage").n-pagnav__circle
+                        a(href="#fifthPage").n-pagnav__circle
+
+            .section.section--3
+                .n-main
+                    .n-s3
+                        header(class=`n-header`).adaptive-hidden
+
+                            svg.n-header__logo
+                                use(xlink:href="images/sprite.svg#logo-small")
+
+                            nav.n-header__nav
+                                a(href="").n-header__nav-link Платформа
+                                a(href="").n-header__nav-link Решения
+                                a(href="").n-header__nav-link Почему мы
+                                a(href="").n-header__nav-link Компания
+                                a(href="").n-header__nav-link Ресурсы
+
+                            a(href="").icon-link.n-header__tel
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#phone")
+
+                            a(href="").icon-link.n-header__profile
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#human")
+
+                            a(href="").n-header__btn
+                                svg
+                                    use(xlink:href="images/sprite.svg#pen")
+                                span Демо
+
+                            .n-header__hamburger
+                                a(href="").icon-link
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#hamburger")
+
+                        img(src="images/rects.png", alt="").desktop-hidden
+
+                        .n-content.n-s3__content
+                            .n-content__subtitle.n-content__subtitle--white
+                                div.n-inner-text ПЕРСОНАЛИЗАЦИЯ КОНТЕНТА
+                            .n-content__title.n-content__title--white
+                                div.n-inner-text Правильное предложение
+                            .n-content__text.n-content__text--white
+                                div.n-inner-text.n-s-text.n-s-text--lato Искусственный интеллект платформы Digital Contact мгновенно строит для каждого персональный сайт, письмо или товарную рекомендацию, показывая только то, что интересно человеку, учитывая его уникальные предпочтения. В отличие от сплит-тестирования, платформа не выбирает одну версию с самой высокой конверсией, а показывает лучшую версию для конкретного человека.
+                            a(href="").n-content__button.n-content__button--white
+                                span.n-inner-text
+                                    | Записаться на
+                                    span &nbsp; Демо
+
+
+                        footer(class=`n-footer`).adaptive-hidden
+                            .n-socials
+                                a(href="").icon-link.n-socials__link
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#vk")
+                                a(href="").icon-link.n-socials__link.icon-link--fb
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#fb")
+                                a(href="").icon-link.n-socials__link
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#youtube")
+                            .n-footer__copyright
+                                | © 2008-2017 Digital Contact
+
+                    a(href="#thirdPage").n-slides-link.n-slides-link--white.adaptive-hidden
+                        svg.n-slides-link__arrow
+                            use(xlink:href="images/sprite.svg#arrow-down")
+
+                    .n-pagnav.adaptive-hidden
+                        a(href="#firstPage").n-pagnav__circle
+                        a(href="#secondPage").n-pagnav__active 02
+                        a(href="#thirdPage").n-pagnav__circle
+                        a(href="#fourthPage").n-pagnav__circle
+                        a(href="#fifthPage").n-pagnav__circle
+
+            .section.section--4
+                .n-main
+
+                    .n-s3
+                        header(class=`n-header`).adaptive-hidden
+
+                            svg.n-header__logo
+                                use(xlink:href="images/sprite.svg#logo-small")
+
+                            nav.n-header__nav.n-header__nav--grey
+                                a(href="").n-header__nav-link Платформа
+                                a(href="").n-header__nav-link Решения
+                                a(href="").n-header__nav-link Почему мы
+                                a(href="").n-header__nav-link Компания
+                                a(href="").n-header__nav-link Ресурсы
+
+                            a(href="").icon-link.n-header__tel
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#phone")
+
+                            a(href="").icon-link.n-header__profile
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#human")
+
+                            a(href="").n-header__btn
+                                svg
+                                    use(xlink:href="images/sprite.svg#pen")
+                                span Демо
+
+                            .n-header__hamburger
+                                a(href="").icon-link
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#hamburger")
+
+                        img(src="images/clocks.png", alt="").desktop-hidden
+
+                        .n-content.n-s3__content
+                            .n-content__subtitle.n-content__subtitle--blue.n-content__subtitle--communication
+                                div.n-inner-text Коммуникация в правильное время
+                            .n-content__title.n-content__title--white
+                                div.n-inner-text Правильное время
+                            .n-content__text.n-content__text--grey
+                                div.n-inner-text.n-s-text Анализируя историю покупок, поведение, интересы и профиль клиентов, искусственный интеллект Digital Contact точно знает, когда каждый ваш клиент читает почту и на каком устройстве. Алгоритм сам принимает решения - кому, какое сообщение, в какое время, с какой частотой и по какому каналу отправить. Мы работаем над каждой точкой контакта и оптимизируем путешествие клиента.
+                            a(href="").n-content__button.n-content__button--gwhite.n-content__button--03
+                                span.n-inner-text
+                                    | Записаться на
+                                    span &nbsp; Демо
+
+                        footer(class=`n-footer`).adaptive-hidden
+                            .n-socials
+                                a(href="").icon-link.n-socials__link
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#vk")
+                                a(href="").icon-link.n-socials__link.icon-link--fb
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#fb")
+                                a(href="").icon-link.n-socials__link
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#youtube")
+                            .n-footer__copyright
+                                | © 2008-2017 Digital Contact
+
+                    a(href="#fourthPage").n-slides-link.n-slides-link--white.adaptive-hidden
+                        svg.n-slides-link__arrow
+                            use(xlink:href="images/sprite.svg#arrow-down")
+
+                    .n-pagnav.n-pagnav--whiteblue.adaptive-hidden
+                        a(href="#firstPage").n-pagnav__circle
+                        a(href="#secondPage").n-pagnav__circle
+                        a(href="#thirdPage").n-pagnav__active 03
+                        a(href="#fourthPage").n-pagnav__circle
+                        a(href="#fifthPage").n-pagnav__circle
+
+            .section.section--5
+                .n-main
+
+                    .n-s3
+                        header(class=`n-header`).adaptive-hidden
+
+                            svg.n-header__logo
+                                use(xlink:href="images/sprite.svg#logo-grey")
+
+                            nav.n-header__nav.n-header__nav--grey2
+                                a(href="").n-header__nav-link Платформа
+                                a(href="").n-header__nav-link Решения
+                                a(href="").n-header__nav-link Почему мы
+                                a(href="").n-header__nav-link Компания
+                                a(href="").n-header__nav-link Ресурсы
+
+                            a(href="").icon-link.n-header__tel.icon-link--grey
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#phone")
+
+                            a(href="").icon-link.n-header__profile.icon-link--grey
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#human")
+
+                            a(href="").n-header__btn
+                                svg
+                                    use(xlink:href="images/sprite.svg#pen")
+                                span Демо
+
+                            .n-header__hamburger
+                                a(href="").icon-link.icon-link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#hamburger")
+
+                        img(src="images/flower.png", alt="").desktop-hidden
+
+                        .n-content.n-s3__content
+                            .n-content__subtitle.n-content__subtitle--blue.n-content__subtitle--segmentation
+                                div.n-inner-text тОЧЕЧНАЯ СЕГМЕНТАЦИЯ
+                            .n-content__title.n-content__title--grey
+                                div.n-inner-text Правильному клиенту
+                            .n-content__text.n-content__text--grey2
+                                div.n-inner-text.n-s-text Алгоритм платформы Digital Contact с машинным обучением в реальном времени анализирует детальные данные о посетителях со всех каналов, отслеживает поведение и намерения. Привлекает правильных клиентов и помогает им узнать все о ваших продуктах. С каждым действием посетителя алгоритм становится умнее автоматически улучшает результаты коммуникации без дополнительных затрат на трафик и людей.
+                            a(href="").n-content__button.n-content__button--ggrey.n-content__button--04
+                                span.n-inner-text
+                                    | Записаться на
+                                    span &nbsp; Демо
+
+                        footer(class=`n-footer`).adaptive-hidden
+                            .n-socials
+                                a(href="").icon-link.n-socials__link.icon-link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#vk")
+                                a(href="").icon-link.n-socials__link.icon-link--fb.icon-link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#fb")
+                                a(href="").icon-link.n-socials__link.icon-link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#youtube")
+                            .n-footer__copyright.n-footer__copyright--grey
+                                | © 2008-2017 Digital Contact
+
+                    a(href="#fifthPage").n-slides-link.n-slides-link--grey.adaptive-hidden
+                        svg.n-slides-link__arrow
+                            use(xlink:href="images/sprite.svg#arrow-down")
+
+                    .n-pagnav.n-pagnav--greygrey.adaptive-hidden
+                        a(href="#firstPage").n-pagnav__circle
+                        a(href="#secondPage").n-pagnav__circle
+                        a(href="#thirdPage").n-pagnav__circle
+                        a(href="#fourthPage").n-pagnav__active 04
+                        a(href="#fifthPage").n-pagnav__circle
+
+            .section.section--6
+                .n-main
+
+                    .n-s3
+                        header(class=`n-header`).adaptive-hidden
+
+                            svg.n-header__logo
+                                use(xlink:href="images/sprite.svg#logo-grey")
+
+                            nav.n-header__nav.n-header__nav--grey2
+                                a(href="").n-header__nav-link Платформа
+                                a(href="").n-header__nav-link Решения
+                                a(href="").n-header__nav-link Почему мы
+                                a(href="").n-header__nav-link Компания
+                                a(href="").n-header__nav-link Ресурсы
+
+                            a(href="").icon-link.n-header__tel.icon-link--grey
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#phone")
+
+                            a(href="").icon-link.n-header__profile.icon-link--grey
+                                svg.n-slides-link__arrow
+                                    use(xlink:href="images/sprite.svg#human")
+
+                            a(href="").n-header__btn
+                                svg
+                                    use(xlink:href="images/sprite.svg#pen")
+                                span Демо
+
+                            .n-header__hamburger
+                                a(href="").icon-link.icon-link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#hamburger")
+
+                        .n-content.n-s3__content.n-content--last
+                            .n-content__100
+                                .n-content__title.n-content__title--grey
+                                    div.n-inner-text Внедрение
+                                .n-content__subtitle2
+                                    div.n-inner-text Что вы получите после внедрения?
+                            .n-content__2blocks
+                                .n-content__50
+                                    .n-advantages
+                                        .n-advantages__row
+                                            .n-advantages__cifra
+                                                span.n-big-text X5
+                                                span.n-big-smalltext раз быстрее
+                                            .n-advantages__text Конвертируется посетитель в покупателя
+                                        .n-advantages__row
+                                            .n-advantages__cifra
+                                                span.n-big-text X3
+                                                span.n-big-smalltext раза больше
+                                            .n-advantages__text Конвертируется посетитель в покупателя
+                                        .n-advantages__row
+                                            .n-advantages__cifra
+                                                span.n-big-text
+                                                    span +
+                                                    |30%
+                                            .n-advantages__text К доходности клиентской базы
+                                .n-content__50
+                                    .n-partners--title.c-desktop-hidden С нами работают
+                                    .n-partners
+                                        div
+                                            svg.n-partners__img
+                                                use(xlink:href="images/sprite.svg#leaguehero")
+                                        div
+                                            svg.n-partners__img
+                                                use(xlink:href="images/sprite.svg#apriori-design")
+                                        div
+                                            svg.n-partners__img
+                                                use(xlink:href="images/sprite.svg#optika")
+                                        div
+                                            svg.n-partners__img
+                                                use(xlink:href="images/sprite.svg#accessorize")
+
+
+                        footer(class=`n-footer`).adaptive-hidden
+                            .n-socials
+                                a(href="").icon-link.n-socials__link.icon-link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#vk")
+                                a(href="").icon-link.n-socials__link.icon-link--fb.icon-link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#fb")
+                                a(href="").icon-link.n-socials__link.icon-link--grey
+                                    svg.n-slides-link__arrow
+                                        use(xlink:href="images/sprite.svg#youtube")
+                            .n-footer__copyright.n-footer__copyright--grey
+                                | © 2008-2017 Digital Contact
+
+                    a(href="#titlePage").n-slides-link.n-slides-link--grey.n-slides-link--on-top.adaptive-hidden
+                        svg.n-slides-link__arrow
+                            use(xlink:href="images/sprite.svg#arrow-down")
+
+                    .n-pagnav.n-pagnav--greygrey.adaptive-hidden
+                        a(href="#firstPage").n-pagnav__circle
+                        a(href="#secondPage").n-pagnav__circle
+                        a(href="#thirdPage").n-pagnav__circle
+                        a(href="#fourthPage").n-pagnav__circle
+                        a(href="#fifthPage").n-pagnav__active 05
 
 
         script(src='js/foundation.js')
-        script(src='js/main.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.min.js")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js')
+        //- script(src='js/main.js')
+
+        script.
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+                    //responsiveHeight: 1279,
+                    scrollOverflow: true,
+
+                });
+            });

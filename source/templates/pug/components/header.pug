@@ -1,0 +1,30 @@
+mixin header(classes)
+    header(class=`n-header ${classes}`)
+
+        svg.n-header__logo
+            use(xlink:href="images/sprite.svg#logo-small")
+
+        nav.n-header__nav
+            a(href="").n-header__nav-link Платформа
+            a(href="").n-header__nav-link Решения
+            a(href="").n-header__nav-link Почему мы
+            a(href="").n-header__nav-link Компания
+            a(href="").n-header__nav-link Ресурсы
+
+        a(href="").icon-link.n-header__tel
+            svg.n-slides-link__arrow
+                use(xlink:href="images/sprite.svg#phone")
+
+        a(href="").icon-link.n-header__profile
+            svg.n-slides-link__arrow
+                use(xlink:href="images/sprite.svg#human")
+
+        a(href="").n-header__btn
+            svg
+                use(xlink:href="images/sprite.svg#pen")
+            span Демо
+
+        .n-header__hamburger
+            a(href="").icon-link
+                svg.n-slides-link__arrow
+                    use(xlink:href="images/sprite.svg#hamburger")

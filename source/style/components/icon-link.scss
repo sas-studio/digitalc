@@ -1,0 +1,31 @@
+.icon-link {
+    height: 3.125em;
+    width: 3.125em;
+    border: 1px solid rgba(white, .6);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    svg {
+        width: 30%;
+        max-height: 50%;
+        fill: white;
+    }
+
+    &--fb {
+        svg {
+            height: 40%;
+        }
+    }
+
+    &--grey {
+        border-color: #b7bfc4;
+        svg {
+            fill: #b7bfc4;
+        }
+    }
+}

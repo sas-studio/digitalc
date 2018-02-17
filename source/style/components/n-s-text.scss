@@ -1,0 +1,17 @@
+.n-s-text {
+    font: {
+        size: 1.125em;
+        weight: 300;
+    }
+    line-height: 2em;
+
+    &--lato {
+        font-family: 'Lato', sans-serif;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .n-s-text {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,78 @@
+.n-advantages {
+
+    &__row {
+        position: relative;
+        margin-bottom: 4.6875em;
+    }
+
+    &__cifra {
+        width: 23.625em; //379px
+        color: #dae5e9;
+
+        display: flex;
+        align-items: flex-end;
+
+        .n-big-text {
+            font: {
+                size: 7.5em;
+                weight: 800;
+            }
+            line-height: 0.75em;
+
+            span {
+                font-size: 0.5em;
+            }
+
+            display: flex;
+            align-items: center;
+        }
+        .n-big-smalltext {
+            font: {
+                size: 1.5em;
+                weight: 400;
+                family: 'Lato', sans-serif;
+            }
+            letter-spacing: 1px;
+            margin-left: 1.25em;// 20px
+        }
+    }
+
+    &__text {
+        color: #2f373b;
+        font: {
+            size: 1.125em;
+        }
+
+        position: absolute;
+        bottom: 0;
+        left: 23.625em;
+        white-space: pre;
+    }
+
+}
+
+@media screen and (max-width: 1279px) {
+    .n-advantages {
+        &__row {
+            margin-bottom: 30px;
+        }
+        &__cifra {
+            .n-big-text {
+                font-size: 80px;
+            }
+            .n-big-smalltext {
+                font-size: 24px;
+                margin-left: 20px;
+            }
+        }
+         &__text {
+            position: static;
+            white-space: normal;
+            font: {
+                size: 18px;
+            }
+            line-height: 1.2em;
+            margin-top: 20px;
+         }
+    }
+}

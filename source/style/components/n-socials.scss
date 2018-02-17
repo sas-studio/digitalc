@@ -1,0 +1,17 @@
+.n-socials {
+    display: flex;
+
+
+    &__link {
+        margin-right: 19px;
+
+        &--grey {
+            border: 1px solid rgba(#3a3d41, .8);
+
+            svg {
+                fill: #3a3d41;
+            }
+        }
+
+    }
+}

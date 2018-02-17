@@ -1,0 +1,14 @@
+mixin footer(classes)
+    footer(class=`n-footer ${classes}`)
+        .n-socials
+            a(href="").icon-link.n-socials__link.n-socials__link--grey
+                svg.n-slides-link__arrow
+                    use(xlink:href="images/sprite.svg#vk")
+            a(href="").icon-link.n-socials__link.n-socials__link--grey.icon-link--fb
+                svg.n-slides-link__arrow
+                    use(xlink:href="images/sprite.svg#fb")
+            a(href="").icon-link.n-socials__link.n-socials__link--grey
+                svg.n-slides-link__arrow
+                    use(xlink:href="images/sprite.svg#youtube")
+        .n-footer__copyright
+            | © 2008-2017 Digital Contact
