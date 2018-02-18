@@ -186,3 +186,11 @@
         }
     }
 }
+
+@media screen and (max-height: 600px) {
+    .n-content {
+        &__title .n-inner-text {
+            font-size: 2em;
+        }
+    }
+}
