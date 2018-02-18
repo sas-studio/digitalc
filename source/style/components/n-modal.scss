@@ -1,0 +1,101 @@
+.n-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    padding-top: 3em;
+    padding-bottom: 2em;
+
+    background-color: #38373b;
+    z-index: 100;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        padding-left: 27.5em;//8.064516%;//
+        padding-right: 7.929292%;//157px;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__close {
+        position: absolute;
+        top: 3.75em;
+        right: calc(7.929292% + 15px);
+        cursor: pointer;
+        z-index: 110;
+
+        svg {
+            width: 33px;
+            height: 33px;
+            fill: white;
+        }
+    }
+
+    &__find {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin-bottom: 6.25em;
+
+        input {
+            background: {
+                color: rgba(0,0,0,0);
+            }
+            height: 28px;
+
+            color: white;
+            font: {
+                size: 1em;
+                weight: 200;
+            }
+
+            &:hover {
+                border-bottom: 1px solid white;
+            }
+        }
+        svg {
+            fill: white;
+            height: 28px;
+            width: 27px;
+
+            margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .n-modal {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 1279px) {
+    .desktop-hidden {
+        display: none !important;
+    }
+    .n-modal {
+        min-height: 100vh;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .n-modal {
+        font-size: 16px;
+        padding: 0 ;
+        overflow: hidden;
+    }
+
+    .adaptive-hidden {
+        display: none !important;
+    }
+}

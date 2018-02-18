@@ -1,0 +1,43 @@
+.n-modal-footer {
+    display: flex;
+    margin-top: 4.375em;
+
+    &__left {
+        width: 40%;
+    }
+    &__right {
+        width: calc(100% - 40%);
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btns {
+        display: flex;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+
+        span {
+            color: white;
+            font: {
+                size: 0.875em;
+                weight: 400;
+            }
+            text: {
+                transform: uppercase;
+                decoration: none;
+            }
+            letter-spacing: 2px;
+        }
+
+        .icon-link {
+            margin-right: 1.75em;
+        }
+    }
+
+    &__btn:first-child {
+        margin-right: 6.875em;
+    }
+}

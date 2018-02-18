@@ -13,5 +13,13 @@
             }
         }
 
+        &--darkgrey {
+            border: 1px solid rgba(#56555b, .8);
+
+            svg {
+                fill: #56555b;
+            }
+        }
+
     }
 }

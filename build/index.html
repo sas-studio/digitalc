@@ -339,6 +339,91 @@
         </div>
       </div>
     </div>
+    <div class="n-modal" id="n-modal" style="display: none;"><a class="n-modal__close" href="" id="n-modal__close">
+        <svg>
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg></a>
+      <div class="n-modal__content">
+        <div class="n-modal__find">
+          <svg>
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          <input type="text">
+        </div>
+        <div class="n-modal__list n-modal-list">
+          <div class="n-modal-list__first">
+            <div class="n-modal-list__block">
+              <div class="n-modal-list__title"><span>Платформа</span></div>
+              <div class="n-modal-list__link"><a href="">Lite</a></div>
+              <div class="n-modal-list__link"><a href="">Pro</a></div>
+              <div class="n-modal-list__link"><a href="">Exchange</a></div>
+            </div>
+            <div class="n-modal-list__block">
+              <div class="n-modal-list__title"><span>Решения</span></div>
+              <div class="n-modal-list__link"><a href="">Лид-менеджмент</a></div>
+              <div class="n-modal-list__link"><a href="">Email автоматизация</a></div>
+              <div class="n-modal-list__link"><a href="">Ecommerce автоматизация</a></div>
+              <div class="n-modal-list__link"><a href="">Работа с клиентской базой</a></div>
+              <div class="n-modal-list__link"><a href="">Комплексные решения</a></div>
+            </div>
+          </div>
+          <div class="n-modal-list__middle">
+            <div class="n-modal-list__block">
+              <div class="n-modal-list__title"><span>Почему мы</span></div>
+            </div>
+            <div class="n-modal-list__block">
+              <div class="n-modal-list__title"><span>Компания</span></div>
+              <div class="n-modal-list__link"><a href="">О компании</a></div>
+              <div class="n-modal-list__link"><a href="">Новости/CМИ</a></div>
+              <div class="n-modal-list__link"><a href="">Клиенты</a></div>
+              <div class="n-modal-list__link"><a href="">Контакты</a></div>
+            </div>
+          </div>
+          <div class="n-modal-list__last">
+            <div class="n-modal-list__block">
+              <div class="n-modal-list__title"><span>Ресурсы</span></div>
+              <div class="n-modal-list__link"><a href="">База знаний</a></div>
+              <div class="n-modal-list__link"><a href="">Вебинары</a></div>
+              <div class="n-modal-list__link"><a href="">API</a></div>
+            </div>
+            <div class="n-modal-list__block">
+              <div class="n-modal-list__link"><a href="">Защита персональных данных 152-ФЗ</a></div>
+              <div class="n-modal-list__link"><a href="">АнтиСпам соглашение</a></div>
+              <div class="n-modal-list__link"><a href="">Политика конфиденциальности</a></div>
+              <div class="n-modal-list__link"><a href="">Условия использования сервиса</a></div>
+              <div class="n-modal-list__link"><a href="">Обработка персональных данных</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="n-modal__footer n-modal-footer">
+          <div class="n-modal-footer__left">
+            <div class="n-modal-footer__btns"><a class="n-modal-footer__btn" href="">
+                <div class="icon-link icon-link--blue">
+                  <svg class="n-slides-link__arrow">
+                    <use xlink:href="images/sprite.svg#human"></use>
+                  </svg>
+                </div><span>Вход</span></a><a class="n-modal-footer__btn" href="">
+                <div class="icon-link icon-link--blue">
+                  <svg class="n-slides-link__arrow">
+                    <use xlink:href="images/sprite.svg#plus"></use>
+                  </svg>
+                </div><span>Регистрация</span></a></div>
+          </div>
+          <div class="n-modal-footer__right">
+            <div class="n-socials"><a class="icon-link n-socials__link n-socials__link--darkgrey" href="">
+                <svg class="n-slides-link__arrow">
+                  <use xlink:href="images/sprite.svg#vk"></use>
+                </svg></a><a class="icon-link n-socials__link icon-link--fb n-socials__link--darkgrey" href="">
+                <svg class="n-slides-link__arrow">
+                  <use xlink:href="images/sprite.svg#fb"></use>
+                </svg></a><a class="icon-link n-socials__link n-socials__link--darkgrey" href="">
+                <svg class="n-slides-link__arrow">
+                  <use xlink:href="images/sprite.svg#youtube"></use>
+                </svg></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/foundation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
@@ -357,6 +442,15 @@
                   $('html, body').animate({ scrollTop: $('#top-section').outerHeight() }, 700);
               });
           }
+      
+          $('.n-header__hamburger').on('click', function(e) {
+              e.preventDefault();
+              $('#n-modal').fadeIn(200);
+          });
+          $('#n-modal__close').on('click', function(e) {
+              e.preventDefault();
+              $('#n-modal').fadeOut(200);
+          });
       
       });
     </script>
