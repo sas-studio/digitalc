@@ -4,7 +4,7 @@
     <title>PageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style/foundation.css">
-    <link rel="stylesheet" href="style/style.css?5">
+    <link rel="stylesheet" href="style/style.css?6">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css">
   </head>
   <body>
@@ -23,8 +23,8 @@
       </div>
       <div class="section section--2">
         <div class="n-main">
-          <div class="n-s2">
-            <header class="n-header">
+          <div class="n-s2" id="second-block">
+            <header class="n-header" id="main-header">
               <svg class="n-header__logo adaptive-hidden">
                 <use xlink:href="images/sprite.svg#logo-small"></use>
               </svg>
@@ -428,6 +428,32 @@
     <script>
       $(document).ready(function() {
       
+          var $header = $('#main-header');
+          var topSectionHeight = $('#top-section').outerHeight();
+          var $secondBlock = $('#second-block');
+      
+          function setHeaderPosition() {
+              if (window.pageYOffset >= topSectionHeight) {
+                  $header.css({
+                      'position': 'fixed',
+                      'top': 0,
+                      'left': 0,
+                      'right': 0
+                  });
+                  $secondBlock.css({
+                      'padding-top': 70 + 'px'
+                  });
+              }
+              else {
+                  $header.css({
+                      'position': 'static'
+                  });
+                  $secondBlock.css({
+                      'padding-top': 0 + 'px'
+                  });
+              }
+          }
+      
           if ($(document).width() > 1279) {
               $('#fullpage').fullpage({
                   anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
@@ -439,6 +465,11 @@
               $('#firt-scroll').on('click', function() {
                   $('html, body').animate({ scrollTop: $('#top-section').outerHeight() }, 700);
               });
+      
+              $(window).scroll(() => {
+                  setHeaderPosition();
+              });
+              setHeaderPosition();
           }
       
           $('.n-header__hamburger').on('click', function(e) {
