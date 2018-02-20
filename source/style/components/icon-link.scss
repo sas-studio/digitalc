@@ -23,15 +23,24 @@
     }
 
     &--grey {
+        color: #b7bfc4;
         border-color: #b7bfc4;
         svg {
             fill: #b7bfc4;
         }
     }
     &--blue {
+        color: #8aa3b2;
         border-color: #8aa3b2;
         svg {
             fill: #8aa3b2;
         }
+    }
+    &__text {
+        font: {
+            size: 26px;
+            weight: 600;
+        }
+        line-height: 26px;
     }
 }

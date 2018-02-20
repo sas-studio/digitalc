@@ -44,3 +44,30 @@
         margin-bottom: 3.125em;
     }
 }
+
+@media screen and (max-width: 1279px) {
+    .n-modal-list {
+        flex-direction: column;
+
+        &__first,
+        &__middle,
+        &__last {
+            width: 100%;
+        }
+
+        &__title {
+            margin-bottom: 1.875em;
+        }
+
+        &__link {
+            margin-bottom: 1.4em;
+            a {
+                font-size: 1em;
+            }
+        }
+
+        &__block {
+            margin-bottom: 2.5em;
+        }
+    }
+}

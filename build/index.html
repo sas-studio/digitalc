@@ -339,10 +339,12 @@
         </div>
       </div>
     </div>
-    <div class="n-modal" id="n-modal" style="display: none;"><a class="n-modal__close" href="" id="n-modal__close">
+    <div class="n-modal" id="n-modal" style="display: none;">
+      <div class="n-modal__close" id="n-modal__close">
         <svg>
           <use xlink:href="images/sprite.svg#close"></use>
-        </svg></a>
+        </svg>
+      </div>
       <div class="n-modal__content">
         <div class="n-modal__find">
           <svg>
@@ -399,25 +401,23 @@
           <div class="n-modal-footer__left">
             <div class="n-modal-footer__btns"><a class="n-modal-footer__btn" href="">
                 <div class="icon-link icon-link--blue">
-                  <svg class="n-slides-link__arrow">
+                  <svg>
                     <use xlink:href="images/sprite.svg#human"></use>
                   </svg>
                 </div><span>Вход</span></a><a class="n-modal-footer__btn" href="">
                 <div class="icon-link icon-link--blue">
-                  <svg class="n-slides-link__arrow">
-                    <use xlink:href="images/sprite.svg#plus"></use>
-                  </svg>
+                  <div class="icon-link__text">+</div>
                 </div><span>Регистрация</span></a></div>
           </div>
           <div class="n-modal-footer__right">
-            <div class="n-socials"><a class="icon-link n-socials__link n-socials__link--darkgrey" href="">
-                <svg class="n-slides-link__arrow">
+            <div class="n-socials n-modal-footer__socials"><a class="icon-link n-socials__link n-socials__link--darkgrey" href="">
+                <svg>
                   <use xlink:href="images/sprite.svg#vk"></use>
                 </svg></a><a class="icon-link n-socials__link icon-link--fb n-socials__link--darkgrey" href="">
-                <svg class="n-slides-link__arrow">
+                <svg>
                   <use xlink:href="images/sprite.svg#fb"></use>
                 </svg></a><a class="icon-link n-socials__link n-socials__link--darkgrey" href="">
-                <svg class="n-slides-link__arrow">
+                <svg>
                   <use xlink:href="images/sprite.svg#youtube"></use>
                 </svg></a></div>
           </div>
@@ -425,8 +425,6 @@
       </div>
     </div>
     <script src="js/foundation.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
     <script>
       $(document).ready(function() {
       

@@ -80,9 +80,6 @@
 }
 
 @media screen and (min-width: 1279px) {
-    .desktop-hidden {
-        display: none !important;
-    }
     .n-modal {
         min-height: 100vh;
     }
@@ -91,11 +88,29 @@
 @media screen and (max-width: 1279px) {
     .n-modal {
         font-size: 16px;
-        padding: 0 ;
-        overflow: hidden;
-    }
+        padding: 0;
+        overflow: auto;
 
-    .adaptive-hidden {
-        display: none !important;
+        &__content {
+            padding: 25px;
+            height: auto;
+        }
+
+        &__close {
+            top: 25px;
+            right: 25px;
+            svg {
+                height: 35px;
+                width: 35px;
+            }
+        }
+
+        &__find {
+            margin-bottom: 50px;
+            svg {
+                height: 35px;
+                width: 35px;
+            }
+        }
     }
 }

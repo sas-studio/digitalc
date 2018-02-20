@@ -429,7 +429,7 @@ html
                         a(href="#fifthPage").n-pagnav__active 05
 
         .n-modal#n-modal(style="display: none;")
-            a(href="").n-modal__close#n-modal__close
+            .n-modal__close#n-modal__close
                 svg
                     use(xlink:href="images/sprite.svg#close")
             .n-modal__content
@@ -507,32 +507,31 @@ html
                         .n-modal-footer__btns
                             a(href="").n-modal-footer__btn
                                 .icon-link.icon-link--blue
-                                    svg.n-slides-link__arrow
+                                    svg
                                         use(xlink:href="images/sprite.svg#human")
                                 span Вход
                             a(href="").n-modal-footer__btn
                                 .icon-link.icon-link--blue
-                                    svg.n-slides-link__arrow
-                                        use(xlink:href="images/sprite.svg#plus")
+                                    .icon-link__text +
                                 span Регистрация
                     .n-modal-footer__right
-                        .n-socials
+                        .n-socials.n-modal-footer__socials
                             a(href="").icon-link.n-socials__link.n-socials__link--darkgrey
-                                svg.n-slides-link__arrow
+                                svg
                                     use(xlink:href="images/sprite.svg#vk")
                             a(href="").icon-link.n-socials__link.icon-link--fb.n-socials__link--darkgrey
-                                svg.n-slides-link__arrow
+                                svg
                                     use(xlink:href="images/sprite.svg#fb")
                             a(href="").icon-link.n-socials__link.n-socials__link--darkgrey
-                                svg.n-slides-link__arrow
+                                svg
                                     use(xlink:href="images/sprite.svg#youtube")
 
 
 
-
+        //- script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.min.js")
         script(src='js/foundation.js')
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.min.js")
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js')
+
+        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js')
         //- script(src='js/main.js')
 
         script.
