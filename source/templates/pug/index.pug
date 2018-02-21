@@ -4,9 +4,13 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css')
-        link(rel="stylesheet" href='style/style.css?7')
+        link(rel="stylesheet" href='style/style.css?8')
         link(rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css')
     body
+        .n-video
+            video(autoplay='' loop='' data-keepplaying='')
+                source(src="images/bg.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                source(src="images/bg.webm" type='video/webm; codecs="vp8, vorbis"')
 
         #fullpage
             .section.section--1#top-section
@@ -48,7 +52,7 @@ html
 
                             a(href="").n-header__btn.adaptive-hidden
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -89,7 +93,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#secondPage").n-slides-link.n-slides-link--white.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -127,7 +131,7 @@ html
 
                             a(href="").n-header__btn
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -163,7 +167,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#thirdPage").n-slides-link.n-slides-link--white.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -202,7 +206,7 @@ html
 
                             a(href="").n-header__btn
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -237,7 +241,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#fourthPage").n-slides-link.n-slides-link--white.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -276,7 +280,7 @@ html
 
                             a(href="").n-header__btn
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -311,7 +315,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright.n-footer__copyright--grey
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#fifthPage").n-slides-link.n-slides-link--grey.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -350,7 +354,7 @@ html
 
                             a(href="").n-header__btn
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -392,15 +396,21 @@ html
                                         div
                                             svg.n-partners__img
                                                 use(xlink:href="images/sprite.svg#leaguehero")
+                                        //- div
+                                        //-     svg.n-partners__img
+                                        //-         use(xlink:href="images/sprite.svg#apriori-design")
+                                        //- div
+                                        //-     svg.n-partners__img
+                                        //-         use(xlink:href="images/sprite.svg#optika")
+                                        //- div
+                                        //-     svg.n-partners__img
+                                        //-         use(xlink:href="images/sprite.svg#accessorize")
                                         div
-                                            svg.n-partners__img
-                                                use(xlink:href="images/sprite.svg#apriori-design")
+                                            img(src="https://digitalcontact.com/ru/images/dynamic-triggers/globe-life.png", alt="")
                                         div
-                                            svg.n-partners__img
-                                                use(xlink:href="images/sprite.svg#optika")
+                                            img(src="https://digitalcontact.com/ru/images/dynamic-triggers/choice-hw.png", alt="")
                                         div
-                                            svg.n-partners__img
-                                                use(xlink:href="images/sprite.svg#accessorize")
+                                            img(src="https://digitalcontact.com/ru/images/dynamic-triggers/progressive.png", alt="")
 
 
                         footer(class=`n-footer`).adaptive-hidden
@@ -415,7 +425,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright.n-footer__copyright--grey
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#titlePage").n-slides-link.n-slides-link--grey.n-slides-link--on-top.adaptive-hidden
                         svg.n-slides-link__arrow
