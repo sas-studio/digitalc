@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="n-video">
-      <video autoplay="" loop="" data-keepplaying="">
+      <video autoplay="autoplay" loop="true" data-keepplaying="" id="bg-video">
         <source src="images/bg.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
         <source src="images/bg.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
       </video>
@@ -474,6 +474,9 @@
               e.preventDefault();
               $('#n-modal').fadeOut(200);
           });
+      
+          var videoElement = document.getElementById('bg-video');
+          videoElement ? videoElement.muted = true : null;
       
       });
     </script>

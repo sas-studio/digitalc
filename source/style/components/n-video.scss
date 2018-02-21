@@ -17,3 +17,12 @@
         min-height: 100%;
     }
 }
+
+@media screen and (max-width: 1279px) {
+    .n-video {
+        video {
+            top: -50px;
+            min-height: calc(100% + 50px);
+        }
+    }
+}
