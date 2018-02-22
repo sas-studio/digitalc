@@ -89,6 +89,14 @@
             span {
                 color: #e9512b;
             }
+
+            transition: .15s;
+        }
+
+        &:hover {
+            .n-inner-text {
+                transform: scale(1.1);
+            }
         }
 
         &--white {
