@@ -149,7 +149,7 @@ html
                                 div.n-inner-text Правильное предложение
                             .n-content__text.n-content__text--white
                                 div.n-inner-text.n-s-text Искусственный интеллект платформы Digital Contact мгновенно строит для каждого персональный сайт, письмо или товарную рекомендацию, показывая только то, что интересно человеку, учитывая его уникальные предпочтения. В отличие от сплит-тестирования, платформа не выбирает одну версию с самой высокой конверсией, а показывает лучшую версию для конкретного человека.
-                            a(href="").n-content__button.n-content__button--white
+                            a(href="").n-content__button.n-content__button--white.n-form-show
                                 span.n-inner-text
                                     | Записаться на
                                     span &nbsp; Демо
@@ -224,7 +224,7 @@ html
                                 div.n-inner-text Правильное время
                             .n-content__text.n-content__text--grey
                                 div.n-inner-text.n-s-text Анализируя историю покупок, поведение, интересы и профиль клиентов, искусственный интеллект Digital Contact точно знает, когда каждый ваш клиент читает почту и на каком устройстве. Алгоритм сам принимает решения - кому, какое сообщение, в какое время, с какой частотой и по какому каналу отправить. Мы работаем над каждой точкой контакта и оптимизируем путешествие клиента.
-                            a(href="").n-content__button.n-content__button--gwhite.n-content__button--03
+                            a(href="").n-content__button.n-content__button--gwhite.n-content__button--03.n-form-show
                                 span.n-inner-text
                                     | Записаться на
                                     span &nbsp; Демо
@@ -298,7 +298,7 @@ html
                                 div.n-inner-text Правильному клиенту
                             .n-content__text.n-content__text--grey2
                                 div.n-inner-text.n-s-text Алгоритм платформы Digital Contact с машинным обучением в реальном времени анализирует детальные данные о посетителях со всех каналов, отслеживает поведение и намерения. Привлекает правильных клиентов и помогает им узнать все о ваших продуктах. С каждым действием посетителя алгоритм становится умнее автоматически улучшает результаты коммуникации без дополнительных затрат на трафик и людей.
-                            a(href="").n-content__button.n-content__button--ggrey.n-content__button--04
+                            a(href="").n-content__button.n-content__button--ggrey.n-content__button--04.n-form-show
                                 span.n-inner-text
                                     | Записаться на
                                     span &nbsp; Демо
@@ -536,6 +536,38 @@ html
                                 svg
                                     use(xlink:href="images/sprite.svg#youtube")
 
+        .n-modal-form#n-modal-form(style="display: none;")
+            .n-modal-form__close#n-modal-form__close
+                svg
+                    use(xlink:href="images/sprite.svg#close")
+
+            .n-modal-form__inner
+                .n-modal-form__content
+                    .n-modal-form__title
+                        span Записаться на демо
+                    .n-modal-form__subtitle
+                        span Заполните форму и узнайте, как снизить расходы на маркетинг, получать новых клиентов и продавать существующим в 2 раза больше.
+
+                    form(action="").n-modal-form__form
+                        .n-form
+                            .n-form__columns
+                                .n-form__left
+                                    input(type="text" placeholder="ФИО*" required).n-form__input
+                                    input(type="text" placeholder="КОМПАНИЯ*" required).n-form__input
+                                    input(type="text" placeholder="АДРЕС САЙТА*" required).n-form__input
+                                .n-form__rigth
+                                    input(type="text" placeholder="EMAIL*" required).n-form__input
+                                    input(type="text" placeholder="+7*" required).n-form__input
+                                    input(type="text" placeholder="ДОЛЖНОСТЬ").n-form__input
+
+                        .n-modal-form__bottom
+                            .n-modal-form__agreement-text
+                                span Заполняя поле на этой странице, вы даете согласие на обработку &nbsp;
+                                    a(href="") персональных данных
+                            a(href="").n-modal-form__btn Отправить
+
+
+
 
         script(src='js/foundation.js')
 
@@ -600,5 +632,16 @@ html
 
                 var videoElement = document.getElementById('bg-video');
                 videoElement ? videoElement.muted = true : null;
+
+                $('.n-form-show').on('click', function(e) {
+                    e.preventDefault();
+                    $('#n-modal-form').fadeIn(200);
+                    $('body').css('overflow', 'hidden');
+                });
+                $('#n-modal-form__close').on('click', function(e) {
+                    e.preventDefault();
+                    $('#n-modal-form').fadeOut(200);
+                    $('body').css('overflow', 'auto');
+                });
 
             });

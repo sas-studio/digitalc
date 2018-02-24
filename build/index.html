@@ -118,7 +118,7 @@
               </div>
               <div class="n-content__text n-content__text--white">
                 <div class="n-inner-text n-s-text">Искусственный интеллект платформы Digital Contact мгновенно строит для каждого персональный сайт, письмо или товарную рекомендацию, показывая только то, что интересно человеку, учитывая его уникальные предпочтения. В отличие от сплит-тестирования, платформа не выбирает одну версию с самой высокой конверсией, а показывает лучшую версию для конкретного человека.</div>
-              </div><a class="n-content__button n-content__button--white" href=""><span class="n-inner-text">Записаться на<span>&nbsp; Демо</span></span></a>
+              </div><a class="n-content__button n-content__button--white n-form-show" href=""><span class="n-inner-text">Записаться на<span>&nbsp; Демо</span></span></a>
             </div>
             <footer class="n-footer adaptive-hidden">
               <div class="n-socials"><a class="icon-link n-socials__link" href="">
@@ -172,7 +172,7 @@
               </div>
               <div class="n-content__text n-content__text--grey">
                 <div class="n-inner-text n-s-text">Анализируя историю покупок, поведение, интересы и профиль клиентов, искусственный интеллект Digital Contact точно знает, когда каждый ваш клиент читает почту и на каком устройстве. Алгоритм сам принимает решения - кому, какое сообщение, в какое время, с какой частотой и по какому каналу отправить. Мы работаем над каждой точкой контакта и оптимизируем путешествие клиента.</div>
-              </div><a class="n-content__button n-content__button--gwhite n-content__button--03" href=""><span class="n-inner-text">Записаться на<span>&nbsp; Демо</span></span></a>
+              </div><a class="n-content__button n-content__button--gwhite n-content__button--03 n-form-show" href=""><span class="n-inner-text">Записаться на<span>&nbsp; Демо</span></span></a>
             </div>
             <footer class="n-footer adaptive-hidden">
               <div class="n-socials"><a class="icon-link n-socials__link" href="">
@@ -226,7 +226,7 @@
               </div>
               <div class="n-content__text n-content__text--grey2">
                 <div class="n-inner-text n-s-text">Алгоритм платформы Digital Contact с машинным обучением в реальном времени анализирует детальные данные о посетителях со всех каналов, отслеживает поведение и намерения. Привлекает правильных клиентов и помогает им узнать все о ваших продуктах. С каждым действием посетителя алгоритм становится умнее автоматически улучшает результаты коммуникации без дополнительных затрат на трафик и людей.</div>
-              </div><a class="n-content__button n-content__button--ggrey n-content__button--04" href=""><span class="n-inner-text">Записаться на<span>&nbsp; Демо</span></span></a>
+              </div><a class="n-content__button n-content__button--ggrey n-content__button--04 n-form-show" href=""><span class="n-inner-text">Записаться на<span>&nbsp; Демо</span></span></a>
             </div>
             <footer class="n-footer adaptive-hidden">
               <div class="n-socials"><a class="icon-link n-socials__link icon-link--grey" href="">
@@ -417,6 +417,38 @@
         </div>
       </div>
     </div>
+    <div class="n-modal-form" id="n-modal-form" style="display: none;">
+      <div class="n-modal-form__close" id="n-modal-form__close">
+        <svg>
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="n-modal-form__inner">
+        <div class="n-modal-form__content">
+          <div class="n-modal-form__title"><span>Записаться на демо</span></div>
+          <div class="n-modal-form__subtitle"><span>Заполните форму и узнайте, как снизить расходы на маркетинг, получать новых клиентов и продавать существующим в 2 раза больше.</span></div>
+          <form class="n-modal-form__form" action="">
+            <div class="n-form">
+              <div class="n-form__columns">
+                <div class="n-form__left">
+                  <input class="n-form__input" type="text" placeholder="ФИО*" required>
+                  <input class="n-form__input" type="text" placeholder="КОМПАНИЯ*" required>
+                  <input class="n-form__input" type="text" placeholder="АДРЕС САЙТА*" required>
+                </div>
+                <div class="n-form__rigth">
+                  <input class="n-form__input" type="text" placeholder="EMAIL*" required>
+                  <input class="n-form__input" type="text" placeholder="+7*" required>
+                  <input class="n-form__input" type="text" placeholder="ДОЛЖНОСТЬ">
+                </div>
+              </div>
+            </div>
+            <div class="n-modal-form__bottom">
+              <div class="n-modal-form__agreement-text"><span>Заполняя поле на этой странице, вы даете согласие на обработку &nbsp;<a href="">персональных данных</a></span></div><a class="n-modal-form__btn" href="">Отправить</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="js/foundation.js"></script>
     <script>
       $(document).ready(function() {
@@ -478,6 +510,17 @@
       
           var videoElement = document.getElementById('bg-video');
           videoElement ? videoElement.muted = true : null;
+      
+          $('.n-form-show').on('click', function(e) {
+              e.preventDefault();
+              $('#n-modal-form').fadeIn(200);
+              $('body').css('overflow', 'hidden');
+          });
+          $('#n-modal-form__close').on('click', function(e) {
+              e.preventDefault();
+              $('#n-modal-form').fadeOut(200);
+              $('body').css('overflow', 'auto');
+          });
       
       });
     </script>
