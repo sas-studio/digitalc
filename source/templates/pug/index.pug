@@ -622,12 +622,13 @@ html
                 $('.n-header__hamburger').on('click', function(e) {
                     e.preventDefault();
                     $('#n-modal').fadeIn(200);
-                    $('body').css('overflow', 'hidden');
+                    $(document).width() < 1279 && $('body').css('overflow', 'hidden');
+
                 });
                 $('#n-modal__close').on('click', function(e) {
                     e.preventDefault();
                     $('#n-modal').fadeOut(200);
-                    $('body').css('overflow', 'auto');
+                    $(document).width() < 1279 && $('body').css('overflow', 'auto');
                 });
 
                 var videoElement = document.getElementById('bg-video');
@@ -636,12 +637,12 @@ html
                 $('.n-form-show').on('click', function(e) {
                     e.preventDefault();
                     $('#n-modal-form').fadeIn(200);
-                    $('body').css('overflow', 'hidden');
+                    $(document).width() < 1279 && $('body').css('overflow', 'hidden');
                 });
                 $('#n-modal-form__close').on('click', function(e) {
                     e.preventDefault();
                     $('#n-modal-form').fadeOut(200);
-                    $('body').css('overflow', 'auto');
+                    $(document).width() < 1279 && $('body').css('overflow', 'auto');
                 });
 
             });
