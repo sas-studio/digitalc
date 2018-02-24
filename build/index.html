@@ -4,7 +4,7 @@
     <title>PageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style/foundation.css?2">
-    <link rel="stylesheet" href="style/style.css?10">
+    <link rel="stylesheet" href="style/style.css?11">
   </head>
   <body>
     <div class="n-video">
@@ -468,10 +468,12 @@
           $('.n-header__hamburger').on('click', function(e) {
               e.preventDefault();
               $('#n-modal').fadeIn(200);
+              $('body').css('overflow', 'hidden');
           });
           $('#n-modal__close').on('click', function(e) {
               e.preventDefault();
               $('#n-modal').fadeOut(200);
+              $('body').css('overflow', 'auto');
           });
       
           var videoElement = document.getElementById('bg-video');
