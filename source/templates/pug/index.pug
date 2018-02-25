@@ -552,13 +552,43 @@ html
                         .n-form
                             .n-form__columns
                                 .n-form__left
-                                    input(type="text" placeholder="ФИО*" required).n-form__input
-                                    input(type="text" placeholder="КОМПАНИЯ*" required).n-form__input
-                                    input(type="text" placeholder="АДРЕС САЙТА*" required).n-form__input
+                                    .n-form__input
+                                        input(type="text" required)
+                                        .n-form__input-placeholder ФИО*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text" required)
+                                        .n-form__input-placeholder КОМПАНИЯ*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text" required)
+                                        .n-form__input-placeholder АДРЕС САЙТА*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
                                 .n-form__rigth
-                                    input(type="text" placeholder="EMAIL*" required).n-form__input
-                                    input(type="text" placeholder="+7*" required).n-form__input
-                                    input(type="text" placeholder="ДОЛЖНОСТЬ").n-form__input
+                                    .n-form__input
+                                        input(type="text" required)
+                                        .n-form__input-placeholder EMAIL*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text" required)
+                                        .n-form__input-placeholder +7*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text")
+                                        .n-form__input-placeholder ДОЛЖНОСТЬ
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
 
                         .n-modal-form__bottom
                             .n-modal-form__agreement-text
@@ -619,6 +649,7 @@ html
                     setHeaderPosition();
                 }
 
+                // menu
                 $('.n-header__hamburger').on('click', function(e) {
                     e.preventDefault();
                     $('#n-modal').fadeIn(200);
@@ -631,9 +662,13 @@ html
                     $(document).width() < 1279 && $('body').css('overflow', 'auto');
                 });
 
+                // video
                 var videoElement = document.getElementById('bg-video');
                 videoElement ? videoElement.muted = true : null;
 
+
+
+                // form
                 $('.n-form-show').on('click', function(e) {
                     e.preventDefault();
                     $('#n-modal-form').fadeIn(200);
@@ -643,6 +678,40 @@ html
                     e.preventDefault();
                     $('#n-modal-form').fadeOut(200);
                     $(document).width() < 1279 && $('body').css('overflow', 'auto');
+                });
+
+                $('#n-modal-form').on('click', function(e) {
+
+                    function setPlaceholderPosition() {
+                        $inputs = $('.n-form__input input');
+                        for (var i = 0; i < $inputs.length; i++) {
+                            if (!$($inputs[i]).val()) {
+                                var $placeholder = $($inputs[i]).siblings('.n-form__input-placeholder');
+                                $placeholder.removeClass('n-showed');
+                            }
+                        }
+                    }
+                    setPlaceholderPosition();
+
+                    if ($(e.target).closest('.n-form__input-close').length) {
+                        var $input = $(e.target).closest('.n-form__input').find('input');
+                        $input.val('');
+                        setPlaceholderPosition();
+                    }
+
+                    $('.n-form__input-close').removeClass('n-showed');
+
+                    if ($(e.target).is('.n-form__input input')) {
+                        var $closeBtn = $(e.target).siblings('.n-form__input-close');
+                        var $placeholder = $(e.target).siblings('.n-form__input-placeholder');
+
+                        if (!$closeBtn.hasClass('n-showed')) {
+                            $closeBtn.addClass('n-showed');
+                        }
+                        if (!$placeholder.hasClass('n-showed')) {
+                            $placeholder.addClass('n-showed');
+                        }
+                    }
                 });
 
             });
