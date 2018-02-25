@@ -22,7 +22,10 @@
 
     &__inner {
         overflow: auto;
-        //padding: 150px 0 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
 
         display: flex;
         flex-direction: column;
@@ -42,10 +45,19 @@
         cursor: pointer;
         z-index: 110;
 
+
         svg {
             width: 33px;
             height: 33px;
             fill: white;
+
+            transition: all .10s;
+        }
+
+        &:hover {
+            svg {
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -88,6 +100,10 @@
 
         a {
             color: white;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 
@@ -106,6 +122,16 @@
         text-transform: uppercase;
         text-decoration: none;
         letter-spacing: 2px;
+
+        span {
+            transition: all 0.10s;
+        }
+
+        &:hover {
+            span {
+                transform: scale(1.1);
+            }
+        }
     }
 }
 
@@ -128,8 +154,10 @@
         overflow: auto;
 
         &__content {
+            width: 100%;
+            max-width: 600px;
             padding: 25px;
-            height: auto;
+            padding-top: 70px;
         }
 
         &__close {
@@ -139,6 +167,30 @@
                 height: 35px;
                 width: 35px;
             }
+        }
+
+        &__title {
+            margin-bottom: 30px;
+            span {
+               font-size: 42px;
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 30px;
+            span {
+               font-size: 16px;
+            }
+        }
+
+        &__bottom {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        &__agreement-text {
+            padding-right: 0;
+            margin-top: 10px;
         }
 
     }
