@@ -18,12 +18,6 @@
         transition: .15s;
     }
 
-    &:hover {
-        svg {
-            transform: scale(1.3);
-        }
-    }
-
     &--fb {
         svg {
             height: 40%;
@@ -50,5 +44,16 @@
             weight: 600;
         }
         line-height: 26px;
+        transition: .15s;
+    }
+
+    &:hover {
+        svg {
+            transform: scale(1.3);
+        }
+
+        .icon-link__text {
+            transform: scale(1.3);
+        }
     }
 }
