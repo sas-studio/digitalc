@@ -1,4 +1,11 @@
-./source -> ./build
-gulp конфиг, все пути и gulp задачи находятся в папке gulp
-обязательно подключите в <HEAD> foundation.js, foundation.css для нормализации js и корректной работы jquery
-обратите внимание, что в package.json уже подключен jquery, jquery-ui, font-awesome
+Запуск:
+1) npm install
+2) gulp
+
+в package.json в dependencies добавлено:
+  "fullpage.js": "^2.9.6"
+  
+скрипт fullpage.js подключен в foundation.js (gulp/path/js.foundation.js)
+стили fullpage.сss подключен в foundation.css (gulp/path/css.foundation.js)
+
+также в foundation.js (gulp/path/js.foundation.js) подключается scrolloverflow.min.js, обязательно перед fullpage.js. Сам скрипт scrolloverflow.min.js находится в /source
