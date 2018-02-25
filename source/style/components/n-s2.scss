@@ -65,6 +65,20 @@
             margin-top: 30px;
         }
     }
+}
 
+@media screen and (max-height: 700px) {
+    .n-s2 {
+        &__title .n-inner-text {
+            font-size: 4em;
+        }
+    }
+}
 
+@media screen and (max-height: 600px) {
+    .n-s2 {
+        &__title .n-inner-text {
+            font-size: 2em;
+        }
+    }
 }

@@ -1,0 +1,29 @@
+.n-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .n-video {
+        video {
+            top: -50px;
+            min-height: calc(100% + 50px);
+        }
+    }
+}

@@ -38,17 +38,35 @@
     }
 
     &__text {
-        color: #2f373b;
-        font: {
-            size: 1.125em;
-        }
-
         position: absolute;
         bottom: 0;
         left: 23.625em;
         white-space: pre;
+
+        span {
+            color: #2f373b;
+            font: {
+                size: 1.125em;
+            }
+        }
     }
 
+}
+
+@media screen and (max-width: 1750px) {
+    .n-advantages {
+        &__text span {
+            font-size: 0.8em;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .n-advantages {
+        &__text {
+            font-size: 1.125em;
+        }
+    }
 }
 
 @media screen and (max-width: 1279px) {

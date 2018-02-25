@@ -19,7 +19,7 @@
     }
 
     &__subtitle {
-        margin-bottom: 3.625em;
+        margin-bottom: 2.5em;
         .n-inner-text {
             font: {
                 size: 1em;
@@ -54,7 +54,7 @@
     }
 
     &__text {
-        margin-top: 3.125em;
+        margin-top: 2.5em;
 
         &--white {
             color: white;
@@ -89,6 +89,14 @@
             span {
                 color: #e9512b;
             }
+
+            transition: .15s;
+        }
+
+        &:hover {
+            .n-inner-text {
+                transform: scale(1.1);
+            }
         }
 
         &--white {
@@ -121,7 +129,7 @@
 
 @media screen and (max-width: 1279px) {
     .n-content {
-        padding: 25px;
+        padding: 25px 25px 47px;
 
         &--last {
             padding-top: 60px !important;
@@ -178,10 +186,19 @@
 
         &__2blocks {
             flex-direction: column;
+            padding-bottom: 50px;
         }
 
         &__50 {
             width: 100%;
+        }
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .n-content {
+        &__title .n-inner-text {
+            font-size: 2em;
         }
     }
 }

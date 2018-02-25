@@ -3,24 +3,28 @@ html
     head
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
-        link(rel="stylesheet" href='style/foundation.css')
-        link(rel="stylesheet" href='style/style.css')
-        link(rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css')
+        link(rel="stylesheet" href='style/foundation.css?2')
+        link(rel="stylesheet" href='style/style.css?15')
+        //- link(rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css')
     body
+        .n-video
+            video(autoplay='autoplay' loop='true' data-keepplaying='')#bg-video
+                source(src="images/bg.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                source(src="images/bg.webm" type='video/webm; codecs="vp8, vorbis"')
 
         #fullpage
-            .section.section--1
+            .section.section--1#top-section
                 .n-main
                     .n-s1
                         svg.n-logo
                             use(xlink:href="images/sprite.svg#logo")
-                    a(href="#firstPage").n-slides-link.n-slides-link--white
+                    a(href="#firstPage").n-slides-link.n-slides-link--white#firt-scroll
                         svg.n-slides-link__arrow
                             use(xlink:href="images/sprite.svg#arrow-down")
             .section.section--2
                 .n-main
-                    .n-s2
-                        header(class=`n-header`)
+                    .n-s2#second-block
+                        header(class=`n-header`)#main-header
 
                             svg.n-header__logo.adaptive-hidden
                                 use(xlink:href="images/sprite.svg#logo-small")
@@ -46,9 +50,9 @@ html
                                 svg.n-slides-link__arrow
                                     use(xlink:href="images/sprite.svg#youtube-circle")
 
-                            a(href="").n-header__btn.adaptive-hidden
+                            a(href="").n-header__btn.adaptive-hidden.n-form-show
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -56,7 +60,8 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#hamburger")
 
-                        img(src="images/eye.png", alt="").desktop-hidden
+                        div.desktop-hidden
+                            img(src="images/eye.png", alt="")
 
                         .n-content.n-s2__content
 
@@ -88,7 +93,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#secondPage").n-slides-link.n-slides-link--white.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -124,9 +129,9 @@ html
                                 svg.n-slides-link__arrow
                                     use(xlink:href="images/sprite.svg#human")
 
-                            a(href="").n-header__btn
+                            a(href="").n-header__btn.n-form-show
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -134,7 +139,8 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#hamburger")
 
-                        img(src="images/rects.png", alt="").desktop-hidden
+                        div.desktop-hidden
+                            img(src="images/rects.png", alt="").desktop-hidden
 
                         .n-content.n-s3__content
                             .n-content__subtitle.n-content__subtitle--white
@@ -142,8 +148,8 @@ html
                             .n-content__title.n-content__title--white
                                 div.n-inner-text Правильное предложение
                             .n-content__text.n-content__text--white
-                                div.n-inner-text.n-s-text.n-s-text--lato Искусственный интеллект платформы Digital Contact мгновенно строит для каждого персональный сайт, письмо или товарную рекомендацию, показывая только то, что интересно человеку, учитывая его уникальные предпочтения. В отличие от сплит-тестирования, платформа не выбирает одну версию с самой высокой конверсией, а показывает лучшую версию для конкретного человека.
-                            a(href="").n-content__button.n-content__button--white
+                                div.n-inner-text.n-s-text Искусственный интеллект платформы Digital Contact мгновенно строит для каждого персональный сайт, письмо или товарную рекомендацию, показывая только то, что интересно человеку, учитывая его уникальные предпочтения. В отличие от сплит-тестирования, платформа не выбирает одну версию с самой высокой конверсией, а показывает лучшую версию для конкретного человека.
+                            a(href="").n-content__button.n-content__button--white.n-form-show
                                 span.n-inner-text
                                     | Записаться на
                                     span &nbsp; Демо
@@ -161,7 +167,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#thirdPage").n-slides-link.n-slides-link--white.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -198,9 +204,9 @@ html
                                 svg.n-slides-link__arrow
                                     use(xlink:href="images/sprite.svg#human")
 
-                            a(href="").n-header__btn
+                            a(href="").n-header__btn.n-form-show
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -208,7 +214,8 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#hamburger")
 
-                        img(src="images/clocks.png", alt="").desktop-hidden
+                        div.desktop-hidden
+                            img(src="images/clocks.png", alt="").desktop-hidden
 
                         .n-content.n-s3__content
                             .n-content__subtitle.n-content__subtitle--blue.n-content__subtitle--communication
@@ -217,7 +224,7 @@ html
                                 div.n-inner-text Правильное время
                             .n-content__text.n-content__text--grey
                                 div.n-inner-text.n-s-text Анализируя историю покупок, поведение, интересы и профиль клиентов, искусственный интеллект Digital Contact точно знает, когда каждый ваш клиент читает почту и на каком устройстве. Алгоритм сам принимает решения - кому, какое сообщение, в какое время, с какой частотой и по какому каналу отправить. Мы работаем над каждой точкой контакта и оптимизируем путешествие клиента.
-                            a(href="").n-content__button.n-content__button--gwhite.n-content__button--03
+                            a(href="").n-content__button.n-content__button--gwhite.n-content__button--03.n-form-show
                                 span.n-inner-text
                                     | Записаться на
                                     span &nbsp; Демо
@@ -234,7 +241,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#fourthPage").n-slides-link.n-slides-link--white.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -271,9 +278,9 @@ html
                                 svg.n-slides-link__arrow
                                     use(xlink:href="images/sprite.svg#human")
 
-                            a(href="").n-header__btn
+                            a(href="").n-header__btn.n-form-show
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -281,7 +288,8 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#hamburger")
 
-                        img(src="images/flower.png", alt="").desktop-hidden
+                        div.desktop-hidden
+                            img(src="images/flower.png", alt="").desktop-hidden
 
                         .n-content.n-s3__content
                             .n-content__subtitle.n-content__subtitle--blue.n-content__subtitle--segmentation
@@ -290,7 +298,7 @@ html
                                 div.n-inner-text Правильному клиенту
                             .n-content__text.n-content__text--grey2
                                 div.n-inner-text.n-s-text Алгоритм платформы Digital Contact с машинным обучением в реальном времени анализирует детальные данные о посетителях со всех каналов, отслеживает поведение и намерения. Привлекает правильных клиентов и помогает им узнать все о ваших продуктах. С каждым действием посетителя алгоритм становится умнее автоматически улучшает результаты коммуникации без дополнительных затрат на трафик и людей.
-                            a(href="").n-content__button.n-content__button--ggrey.n-content__button--04
+                            a(href="").n-content__button.n-content__button--ggrey.n-content__button--04.n-form-show
                                 span.n-inner-text
                                     | Записаться на
                                     span &nbsp; Демо
@@ -307,7 +315,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright.n-footer__copyright--grey
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#fifthPage").n-slides-link.n-slides-link--grey.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -344,9 +352,9 @@ html
                                 svg.n-slides-link__arrow
                                     use(xlink:href="images/sprite.svg#human")
 
-                            a(href="").n-header__btn
+                            a(href="").n-header__btn.n-form-show
                                 svg
-                                    use(xlink:href="images/sprite.svg#pen")
+                                    use(xlink:href="images/sprite.svg#youtube-circle")
                                 span Демо
 
                             .n-header__hamburger
@@ -367,33 +375,42 @@ html
                                             .n-advantages__cifra
                                                 span.n-big-text X5
                                                 span.n-big-smalltext раз быстрее
-                                            .n-advantages__text Конвертируется посетитель в покупателя
+                                            .n-advantages__text
+                                                span Конвертируется посетитель в покупателя
                                         .n-advantages__row
                                             .n-advantages__cifra
                                                 span.n-big-text X3
                                                 span.n-big-smalltext раза больше
-                                            .n-advantages__text Конвертируется посетитель в покупателя
+                                            .n-advantages__text
+                                                span Конвертируется посетитель в покупателя
                                         .n-advantages__row
                                             .n-advantages__cifra
                                                 span.n-big-text
                                                     span +
                                                     |30%
-                                            .n-advantages__text К доходности клиентской базы
+                                            .n-advantages__text
+                                                span К доходности клиентской базы
                                 .n-content__50
-                                    .n-partners--title.c-desktop-hidden С нами работают
+                                    .n-partners--title.desktop-hidden С нами работают
                                     .n-partners
                                         div
                                             svg.n-partners__img
                                                 use(xlink:href="images/sprite.svg#leaguehero")
+                                        //- div
+                                        //-     svg.n-partners__img
+                                        //-         use(xlink:href="images/sprite.svg#apriori-design")
+                                        //- div
+                                        //-     svg.n-partners__img
+                                        //-         use(xlink:href="images/sprite.svg#optika")
+                                        //- div
+                                        //-     svg.n-partners__img
+                                        //-         use(xlink:href="images/sprite.svg#accessorize")
                                         div
-                                            svg.n-partners__img
-                                                use(xlink:href="images/sprite.svg#apriori-design")
+                                            img(src="https://digitalcontact.com/ru/images/dynamic-triggers/globe-life.png", alt="")
                                         div
-                                            svg.n-partners__img
-                                                use(xlink:href="images/sprite.svg#optika")
+                                            img(src="https://digitalcontact.com/ru/images/dynamic-triggers/choice-hw.png", alt="")
                                         div
-                                            svg.n-partners__img
-                                                use(xlink:href="images/sprite.svg#accessorize")
+                                            img(src="https://digitalcontact.com/ru/images/dynamic-triggers/progressive.png", alt="")
 
 
                         footer(class=`n-footer`).adaptive-hidden
@@ -408,7 +425,7 @@ html
                                     svg.n-slides-link__arrow
                                         use(xlink:href="images/sprite.svg#youtube")
                             .n-footer__copyright.n-footer__copyright--grey
-                                | © 2008-2017 Digital Contact
+                                | © 2008-2018 Digital Contact
 
                     a(href="#titlePage").n-slides-link.n-slides-link--grey.n-slides-link--on-top.adaptive-hidden
                         svg.n-slides-link__arrow
@@ -421,18 +438,287 @@ html
                         a(href="#fourthPage").n-pagnav__circle
                         a(href="#fifthPage").n-pagnav__active 05
 
+        .n-modal#n-modal(style="display: none;")
+            .n-modal__close#n-modal__close
+                svg
+                    use(xlink:href="images/sprite.svg#close")
+            .n-modal__content
+
+                .n-modal__find
+                    svg
+                        use(xlink:href="images/sprite.svg#search")
+                    input(type="text")
+
+                .n-modal__list.n-modal-list
+                    .n-modal-list__first
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Платформа
+                            .n-modal-list__link
+                                a(href="") Lite
+                            .n-modal-list__link
+                                a(href="") Pro
+                            .n-modal-list__link
+                                a(href="") Exchange
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Решения
+                            .n-modal-list__link
+                                a(href="") Лид-менеджмент
+                            .n-modal-list__link
+                                a(href="") Email автоматизация
+                            .n-modal-list__link
+                                a(href="") Ecommerce автоматизация
+                            .n-modal-list__link
+                                a(href="") Работа с клиентской базой
+                            .n-modal-list__link
+                                a(href="") Комплексные решения
+
+                    .n-modal-list__middle
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Почему мы
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Компания
+                            .n-modal-list__link
+                                a(href="") О компании
+                            .n-modal-list__link
+                                a(href="") Новости/CМИ
+                            .n-modal-list__link
+                                a(href="") Клиенты
+                            .n-modal-list__link
+                                a(href="") Контакты
+
+                    .n-modal-list__last
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Ресурсы
+                            .n-modal-list__link
+                                a(href="") База знаний
+                            .n-modal-list__link
+                                a(href="") Вебинары
+                            .n-modal-list__link
+                                a(href="") API
+                        .n-modal-list__block
+                            .n-modal-list__link
+                                a(href="") Защита персональных данных 152-ФЗ
+                            .n-modal-list__link
+                                a(href="") АнтиСпам соглашение
+                            .n-modal-list__link
+                                a(href="") Политика конфиденциальности
+                            .n-modal-list__link
+                                a(href="") Условия использования сервиса
+                            .n-modal-list__link
+                                a(href="") Обработка персональных данных
+
+                .n-modal__footer.n-modal-footer
+                    .n-modal-footer__left
+                        .n-modal-footer__btns
+                            a(href="").n-modal-footer__btn
+                                .icon-link.icon-link--blue
+                                    svg
+                                        use(xlink:href="images/sprite.svg#human")
+                                span Вход
+                            a(href="").n-modal-footer__btn
+                                .icon-link.icon-link--blue
+                                    .icon-link__text +
+                                span Регистрация
+                    .n-modal-footer__right
+                        .n-socials.n-modal-footer__socials
+                            a(href="").icon-link.n-socials__link.n-socials__link--darkgrey
+                                svg
+                                    use(xlink:href="images/sprite.svg#vk")
+                            a(href="").icon-link.n-socials__link.icon-link--fb.n-socials__link--darkgrey
+                                svg
+                                    use(xlink:href="images/sprite.svg#fb")
+                            a(href="").icon-link.n-socials__link.n-socials__link--darkgrey
+                                svg
+                                    use(xlink:href="images/sprite.svg#youtube")
+
+        .n-modal-form#n-modal-form(style="display: none;")
+            .n-modal-form__close#n-modal-form__close
+                svg
+                    use(xlink:href="images/sprite.svg#close")
+
+            .n-modal-form__inner
+                .n-modal-form__content
+                    .n-modal-form__title
+                        span Записаться на демо
+                    .n-modal-form__subtitle
+                        span Заполните форму и узнайте, как снизить расходы на маркетинг, получать новых клиентов и продавать существующим в 2 раза больше.
+
+                    form(action="").n-modal-form__form
+                        .n-form
+                            .n-form__columns
+                                .n-form__left
+                                    .n-form__input
+                                        input(type="text" required)
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder ФИО*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text" required)
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder КОМПАНИЯ*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text" required)
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder АДРЕС САЙТА*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                .n-form__rigth
+                                    .n-form__input
+                                        input(type="text" required)
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder EMAIL*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text" required)
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder +7*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text")
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder ДОЛЖНОСТЬ
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+
+                        .n-modal-form__bottom
+                            .n-modal-form__agreement-text
+                                span Заполняя поле на этой странице, вы даете согласие на обработку &nbsp;
+                                    a(href="") персональных данных
+                            a(href="").n-modal-form__btn
+                                span Отправить
+
+
+
 
         script(src='js/foundation.js')
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.min.js")
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js')
-        //- script(src='js/main.js')
+
 
         script.
             $(document).ready(function() {
-                $('#fullpage').fullpage({
-                    anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
-                    //responsiveHeight: 1279,
-                    scrollOverflow: true,
+
+                var $header = $('#main-header');
+                var topSectionHeight = $('#top-section').outerHeight();
+                var $secondBlock = $('#second-block');
+
+                function setHeaderPosition() {
+                    if (window.pageYOffset >= topSectionHeight) {
+                        $header.css({
+                            'position': 'fixed',
+                            'top': 0,
+                            'left': 0,
+                            'right': 0
+                        });
+                        $secondBlock.css({
+                            'padding-top': 70 + 'px'
+                        });
+                    }
+                    else {
+                        $header.css({
+                            'position': 'static'
+                        });
+                        $secondBlock.css({
+                            'padding-top': 0 + 'px'
+                        });
+                    }
+                }
+
+                if ($(document).width() > 1279) {
+                    $('#fullpage').fullpage({
+                        anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+                        //responsiveHeight: 1279,
+                        scrollOverflow: true,
+                    });
+                }
+                else {
+                    $('#firt-scroll').on('click', function() {
+                        $('html, body').animate({ scrollTop: $('#top-section').outerHeight() }, 700);
+                    });
+
+                    $(window).scroll(() => {
+                        setHeaderPosition();
+                    });
+                    setHeaderPosition();
+                }
+
+                // menu
+                $('.n-header__hamburger').on('click', function(e) {
+                    e.preventDefault();
+                    $('#n-modal').fadeIn(200);
+                    $(document).width() < 1279 && $('body').css('overflow', 'hidden');
 
                 });
+                $('#n-modal__close').on('click', function(e) {
+                    e.preventDefault();
+                    $('#n-modal').fadeOut(200);
+                    $(document).width() < 1279 && $('body').css('overflow', 'auto');
+                });
+
+                // video
+                var videoElement = document.getElementById('bg-video');
+                videoElement ? videoElement.muted = true : null;
+
+
+
+                // form
+                $('.n-form-show').on('click', function(e) {
+                    e.preventDefault();
+                    $('#n-modal-form').fadeIn(200);
+                    $(document).width() < 1279 && $('body').css('overflow', 'hidden');
+                });
+                $('#n-modal-form__close').on('click', function(e) {
+                    e.preventDefault();
+                    $('#n-modal-form').fadeOut(200);
+                    $(document).width() < 1279 && $('body').css('overflow', 'auto');
+                });
+
+                $('#n-modal-form').on('click', function(e) {
+
+                    function setPlaceholderPosition() {
+                        $inputs = $('.n-form__input input');
+                        for (var i = 0; i < $inputs.length; i++) {
+                            if (!$($inputs[i]).val()) {
+                                var $placeholder = $($inputs[i]).siblings('.n-form__input-placeholder');
+                                $placeholder.removeClass('n-showed');
+                            }
+                        }
+                    }
+                    setPlaceholderPosition();
+
+                    if ($(e.target).closest('.n-form__input-close').length) {
+                        var $input = $(e.target).closest('.n-form__input').find('input');
+                        $input.val('');
+                        setPlaceholderPosition();
+                    }
+
+                    $('.n-form__input-close').removeClass('n-showed');
+
+                    if ($(e.target).is('.n-form__input input')) {
+                        var $closeBtn = $(e.target).siblings('.n-form__input-close');
+                        var $placeholder = $(e.target).siblings('.n-form__input-placeholder');
+
+                        if (!$closeBtn.hasClass('n-showed')) {
+                            $closeBtn.addClass('n-showed');
+                        }
+                        if (!$placeholder.hasClass('n-showed')) {
+                            $placeholder.addClass('n-showed');
+                        }
+                    }
+                });
+
             });
