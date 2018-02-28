@@ -14,18 +14,6 @@
       </video>
     </div>
     <div id="fullpage">
-      <div class="section section--1" id="top-section">
-        <div class="n-main">
-          <div class="n-s1">
-            <svg class="n-logo">
-              <use xlink:href="images/sprite.svg#logo"></use>
-            </svg>
-          </div><a class="n-slides-link n-slides-link--white" href="#firstPage" id="firt-scroll">
-            <svg class="n-slides-link__arrow">
-              <use xlink:href="images/sprite.svg#arrow-down"></use>
-            </svg></a>
-        </div>
-      </div>
       <div class="section section--2">
         <div class="n-main">
           <div class="n-s2" id="second-block">
@@ -272,9 +260,6 @@
             </header>
             <div class="n-content n-s3__content n-content--last">
               <div class="n-content__100">
-                <div class="n-content__title n-content__title--grey">
-                  <div class="n-inner-text">Внедрение</div>
-                </div>
                 <div class="n-content__subtitle2">
                   <div class="n-inner-text">Что вы получите после внедрения?</div>
                 </div>
@@ -324,7 +309,7 @@
                   </svg></a></div>
               <div class="n-footer__copyright n-footer__copyright--grey">© 2008-2018 Digital Contact</div>
             </footer>
-          </div><a class="n-slides-link n-slides-link--grey n-slides-link--on-top adaptive-hidden" href="#titlePage">
+          </div><a class="n-slides-link n-slides-link--grey n-slides-link--on-top adaptive-hidden" href="#firstPage">
             <svg class="n-slides-link__arrow">
               <use xlink:href="images/sprite.svg#arrow-down"></use>
             </svg></a>
@@ -535,7 +520,7 @@
       
           if ($(document).width() > 1279) {
               $('#fullpage').fullpage({
-                  anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+                  anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
                   //responsiveHeight: 1279,
                   scrollOverflow: true,
               });

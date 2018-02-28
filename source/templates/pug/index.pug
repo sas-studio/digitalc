@@ -13,14 +13,14 @@ html
                 source(src="images/bg.webm" type='video/webm; codecs="vp8, vorbis"')
 
         #fullpage
-            .section.section--1#top-section
-                .n-main
-                    .n-s1
-                        svg.n-logo
-                            use(xlink:href="images/sprite.svg#logo")
-                    a(href="#firstPage").n-slides-link.n-slides-link--white#firt-scroll
-                        svg.n-slides-link__arrow
-                            use(xlink:href="images/sprite.svg#arrow-down")
+            //- .section.section--1#top-section
+            //-     .n-main
+            //-         .n-s1
+            //-             svg.n-logo
+            //-                 use(xlink:href="images/sprite.svg#logo")
+            //-         a(href="#firstPage").n-slides-link.n-slides-link--white#firt-scroll
+            //-             svg.n-slides-link__arrow
+            //-                 use(xlink:href="images/sprite.svg#arrow-down")
             .section.section--2
                 .n-main
                     .n-s2#second-block
@@ -364,8 +364,8 @@ html
 
                         .n-content.n-s3__content.n-content--last
                             .n-content__100
-                                .n-content__title.n-content__title--grey
-                                    div.n-inner-text Внедрение
+                                //- .n-content__title.n-content__title--grey
+                                //-     div.n-inner-text Внедрение
                                 .n-content__subtitle2
                                     div.n-inner-text Что вы получите после внедрения?
                             .n-content__2blocks
@@ -427,7 +427,7 @@ html
                             .n-footer__copyright.n-footer__copyright--grey
                                 | © 2008-2018 Digital Contact
 
-                    a(href="#titlePage").n-slides-link.n-slides-link--grey.n-slides-link--on-top.adaptive-hidden
+                    a(href="#firstPage").n-slides-link.n-slides-link--grey.n-slides-link--on-top.adaptive-hidden
                         svg.n-slides-link__arrow
                             use(xlink:href="images/sprite.svg#arrow-down")
 
@@ -640,7 +640,7 @@ html
 
                 if ($(document).width() > 1279) {
                     $('#fullpage').fullpage({
-                        anchors:['titlePage', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+                        anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
                         //responsiveHeight: 1279,
                         scrollOverflow: true,
                     });
