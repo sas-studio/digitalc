@@ -1,0 +1,32 @@
+.na-about-logo {
+    position: relative;
+    height: 10.125em;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    &__bg {
+        width: 6.25em; // 100px;
+        height: 100%;
+        background-color: #ef522b;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__text {
+        z-index: 2;
+        padding-left: 2.4em;
+
+        span {
+            font: {
+                size: 4.5em;
+                weight: 500;
+            }
+        }
+        
+    }
+}
