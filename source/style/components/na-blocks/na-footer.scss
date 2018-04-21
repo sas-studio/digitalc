@@ -1,0 +1,17 @@
+.na-footer {
+    background-color: #21303a;
+    
+    &__content {
+        height: 8.8125em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #486274;
+        font: {
+            size: 1em;
+            weight: 400;
+        }
+        letter-spacing: 1px;
+    }
+}
