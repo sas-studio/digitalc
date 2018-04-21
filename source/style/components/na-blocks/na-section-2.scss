@@ -4,3 +4,15 @@
         padding: 8.25em 0 5.9375em;
     }
 }
+
+@media screen and (max-width: 1279px) {
+    .na-section-2 {
+        .na-main {
+            padding: 0 1.5em;
+        }
+
+        &__content {
+            padding: 1.5em 0 0.2em;
+        }
+    }
+}
