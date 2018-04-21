@@ -1,0 +1,70 @@
+.na-section-4 {
+    background: { 
+        image: url('/images/about/section-4.png');
+        size: cover;
+        position: center center;
+    }
+
+    color: white;
+    text-align: center;
+
+    &__content {
+        padding: 6.25em 0;
+    }
+
+    &__title {
+        span {
+            font: {
+                size: 3.25em;
+                weight: 500;
+            }
+        }
+    }
+
+    &__subtitle {
+        span {
+            font: {
+                size: 1.125em;
+                weight: 400;
+            }
+        }
+        margin-top: 2.5em;
+    }
+
+    &__btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em 0 1.5em;
+        height: 3.125em;
+        background-color: #fff;
+        color: #262a2f;
+        text-decoration: none;
+        border-radius: 1.5625em;
+        margin-top: 3.735em;
+
+        span {
+            letter-spacing: 1px;
+            font: {
+                size: 0.875em;
+                weight: 700;
+            }
+            text-transform: uppercase;
+        }
+
+        &-arrow {
+            width: 0.8em;
+            height: 2em;
+            fill: #ef522b;
+            margin-left: 1em;
+            transition: all 0.15s;
+        }
+        
+        &:hover {
+            .na-section-4__btn-arrow {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+}
