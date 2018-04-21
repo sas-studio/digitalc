@@ -15,6 +15,7 @@
         justify-content: flex-start;
         align-items: center;
 
+        letter-spacing: 1px;
         color: white;
         font: {
             size: 0.75em;
@@ -33,5 +34,28 @@
     &__logo {
         margin-top: 2.125em; //34px;
     }
+}
 
+@media screen and (max-width: 1279px) {
+    .na-section-1 {
+        &__content {
+            padding: 0 0 2.125em;
+        }
+
+        &__nav {
+            height: 5.0625em;
+            padding-left: 1.875em;
+            background-color: #e8e8e8;
+
+            span:first-of-type {
+                color: #6e6e6e;
+            }
+            span:last-of-type {
+                color: #bcbcbc;
+            }
+            svg {
+                fill: #6e6e6e;
+            }
+        }
+    }
 }

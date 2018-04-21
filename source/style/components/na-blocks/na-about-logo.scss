@@ -30,3 +30,22 @@
         
     }
 }
+
+@media screen and (max-width: 1279px) {
+    .na-about-logo {
+        height: 11em;
+        &__bg {
+            width: 5.875em; // 100px;
+        }
+        &__text {
+            padding-left: 1.625em;
+
+            span {
+                font: {
+                    size: 2em;
+                    weight: 700;
+                }
+            }
+        }
+    }
+}
