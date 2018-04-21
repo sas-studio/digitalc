@@ -1,0 +1,29 @@
+.na-main {
+    width: 100%;
+    max-width: 1660px;
+    padding-left: 8.064516%;
+    padding-right: 8.064516%;
+    margin: 0 auto;
+    position: relative;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1440px) {
+    .na-main {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .na-main {
+        font-size: 16px;
+        padding: 0 ;
+        overflow: hidden;
+    }
+
+    .adaptive-hidden {
+        display: none !important;
+    }
+}
