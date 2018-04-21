@@ -1,0 +1,98 @@
+.na-otziv {
+    display: flex;
+    justify-content: center;
+    color: #232629;
+
+    &__text {
+        width: 32.5em;
+        position: relative;
+    }
+    &__user {
+        width: 26em;
+        margin-left: 8.125em;
+    }
+
+    &__title {
+        line-height: 2.25em;
+        margin-bottom: 2em;
+
+        span {
+            font: {
+                size: 1.5em;
+                weight: 300;
+                style: italic;
+            }
+        }
+    }
+
+    &__u-text {
+        line-height: 1.625em;
+        margin-bottom: 2em;
+
+        span {
+            font: {
+                size: 1em;
+                weight: 300;
+            }
+        }
+    }
+
+    &__otziv-bg {
+        position: absolute;
+        width: 6.812em;
+        height: 5.625em;
+        top: -2.3em;
+        left: -3.8125em;
+        fill: #f3f6f9;
+        z-index: -1;
+        
+    }
+
+    &__img {
+        position: relative;
+    }
+    &__img-inner {
+        box-shadow: 0 0 40px rgba(#232629, .2);
+    }
+    &__img-bg-top {
+        position: absolute;
+        top: -1.5625em;
+        right: -1.125em;
+        width: 3.9375em;
+        height: 3.3125em;
+        background-color: #eef2f5;
+        box-shadow: 0em 1.5em 35px rgba(#232629, .2);
+    }
+    &__img-bg-bottom {
+        position: absolute;
+        left: -1.3125em;
+        bottom: -2.8125em;
+        width: 4.6875em;
+        height: 3.9375em;
+        background-color: #ef522b;
+    }
+
+    &__user-desc {
+        margin-top: 1.6875em;
+        padding-left: 5.875em;
+    }
+    &__user-name {
+        span {
+            font: {
+                size: 1.125em;
+                weight: 500; 
+            }
+        }
+        margin-bottom: .4em;
+    }
+    &__user-job {
+        line-height: 1.4em;
+        span {
+            font: {
+                size: 1em;
+                weight: 300; 
+                style: italic;
+            }
+        }
+    }
+}
