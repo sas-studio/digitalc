@@ -1,0 +1,26 @@
+.na-section-3 {
+    background-color: #292929;
+    color: white;
+
+    &__content {
+        padding: 8.125em 0 8.25em;
+    }
+
+    &__red-line {
+        width: 5.875em;
+        height: 0.25em;
+        background-color: #ef522b;
+        margin: 0 auto 3.0625em;
+    }
+
+    &__title {
+        line-height: 3em;
+        span {
+            font: {
+                size: 2.625em;
+                weight: 500;
+            }
+        }
+        text-align: center;
+    }
+}

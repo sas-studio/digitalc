@@ -1,0 +1,89 @@
+.na-history {
+    display: flex;
+
+    & > div {
+        width: 25%;
+        padding-right: 5%;
+    }
+
+    &__img {
+        height: 30em;
+        display: flex;
+        margin-bottom: 5.625em;
+
+        &--1 {
+            align-items: flex-end;
+            img {
+                width: 5.0625em;
+            }
+            padding-left: 2.6875em;
+        }
+        &--2 {
+            align-items: flex-end;
+            padding-bottom: 1em;
+            img {
+                width: 10em;
+            }
+        }
+        &--3 {
+            align-items: flex-end;
+            padding-bottom: 2em;
+            img {
+                width: 16em;
+            }
+        }
+        &--4 {
+            align-items: center;
+            img {
+                width: 20em;
+            }
+        }
+    }
+
+    &__date {
+        margin-bottom: 3.25em;
+        span {
+            line-height: 1em;
+            font: {
+                size: 3.5em;
+                weight: 700;
+            }
+        }
+
+        &--1 {
+            color: #3e3e3e
+        }
+        &--2 {
+            color: #a9a9a9;
+        }
+        &--3 {
+            color: #ffffff;
+        }
+        &--4 {
+            color: #ffffff;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.3125em;
+        span {
+            line-height: 1em;
+            font: {
+                size: 0.875em;
+                weight: 600;
+            }
+        }
+        text-transform: uppercase;
+    }
+
+    &__text {
+        line-height: 1.375em;
+        span {
+            color: #bfbfbf;
+            font: {
+                size: 0.875em;
+                weight: 400;
+            }
+        }
+    }
+}
