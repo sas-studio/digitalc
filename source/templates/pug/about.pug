@@ -4,7 +4,7 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css?2')
-        link(rel="stylesheet" href='style/style.css?23')
+        link(rel="stylesheet" href='style/style.css?24')
        
     body
 
@@ -131,7 +131,12 @@ html
                         div
                             .na-history__img.na-history__img--4#na-history__img--4
                                 img(src="images/about/time-4-black.png", alt="").na-img-back
-                                img(src="images/about/time-4.png", alt="").na-img-front
+                                img(src="images/about/time-4-yadro.png", alt="").na-img-front
+
+                                img(src="images/about/time-4-planet1.png", alt="").na-img-front.time-4-planet1
+                                img(src="images/about/time-4-planet2.png", alt="").na-img-front.time-4-planet2
+                                img(src="images/about/time-4-planet3.png", alt="").na-img-front.time-4-planet3
+
                             .na-history__date.na-history__date--4 
                                 span Сегодня
                             .na-history__title
@@ -203,7 +208,7 @@ html
                                 if (t > 4) {
                                     clearInterval(interval);
                                 }
-                            }, 1000);
+                            }, 500);
                         }
 
                         $(WIN).scroll(() => {
