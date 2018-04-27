@@ -4,10 +4,10 @@
     <title>PageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style/foundation.css?2">
-    <link rel="stylesheet" href="style/style.css?20">
+    <link rel="stylesheet" href="style/style.css?24">
   </head>
   <body>
-    <div class="na-main">
+    <div class="na-main na-main--header">
       <header class="n-header na-header">
         <svg class="n-header__logo adaptive-hidden">
           <use xlink:href="images/sprite.svg#logo-grey"></use>
@@ -65,8 +65,7 @@
             <div class="na-otziv__user">
               <div class="na-otziv__img">
                 <div class="na-otziv__img-bg-top"></div>
-                <div class="na-otziv__img-bg-bottom"></div>
-                <div class="na-otziv__img-inner"><img src="images/about/director.png" alt=""></div>
+                <div class="na-otziv__img-bg-bottom"></div><img class="na-otziv__img-inner" src="images/about/director.png" alt="">
               </div>
               <div class="na-otziv__user-desc">
                 <div class="na-otziv__user-name"> <span>Ольга Кутейникова, </span></div>
@@ -84,25 +83,25 @@
           <div class="na-section-3__title"> <span>Развиваемся </span><br><span>вместе с рынком</span></div>
           <div class="na-history">
             <div>
-              <div class="na-history__img na-history__img--1"><img src="images/about/time-1.png" alt=""></div>
+              <div class="na-history__img na-history__img--1" id="na-history__img--1"><img class="na-img-back" src="images/about/time-1-black.png" alt=""><img class="na-img-front" src="images/about/time-1.png" alt=""></div>
               <div class="na-history__date na-history__date--1"><span>2006</span></div>
               <div class="na-history__title"><span>рынок ESP</span></div>
               <div class="na-history__text"> <span>На смену самописным решениям пришли сервисы с доступной абонентской платой. Email-маркетинг стал доступным, но зависимым от компетенций маркетологов. Digital Contact запустил сервис для email-маркетинга и управления доставляемостью. </span></div>
             </div>
             <div>
-              <div class="na-history__img na-history__img--2"><img src="images/about/time-2.png" alt=""></div>
+              <div class="na-history__img na-history__img--2" id="na-history__img--2"><img class="na-img-back" src="images/about/time-2-black.png" alt=""><img class="na-img-front" src="images/about/time-2.png" alt=""></div>
               <div class="na-history__date na-history__date--2"><span>2015</span></div>
               <div class="na-history__title"><span>большие данные </span></div>
               <div class="na-history__text"> <span>Используют крупные компании и улучшают результаты коммуникаций с клиентами, но для малого и среднего бизнеса это еще дорого, нужна армия специалистов высокой квалификации. Digital Contact разрабатывает платформу автоматизации маркетинга.</span></div>
             </div>
             <div>
-              <div class="na-history__img na-history__img--3"><img src="images/about/time-3.png" alt=""></div>
+              <div class="na-history__img na-history__img--3" id="na-history__img--3"><img class="na-img-back" src="images/about/time-3-black.png" alt=""><img class="na-img-front" src="images/about/time-3.png" alt=""></div>
               <div class="na-history__date na-history__date--3"> <span>2016</span></div>
               <div class="na-history__title"><span>Hadoop и Spark</span></div>
               <div class="na-history__text"> <span>Благодаря новым технологиям, машинное обучение стало доступно многим, в маркетинге наступила эра машинного интеллекта. Digital Contact выпустила первую платформу автоматизации маркетинга с машинным интеллектом.</span></div>
             </div>
             <div>
-              <div class="na-history__img na-history__img--4"><img src="images/about/time-4.png" alt=""></div>
+              <div class="na-history__img na-history__img--4" id="na-history__img--4"><img class="na-img-back" src="images/about/time-4-black.png" alt=""><img class="na-img-front" src="images/about/time-4-yadro.png" alt=""><img class="na-img-front time-4-planet1" src="images/about/time-4-planet1.png" alt=""><img class="na-img-front time-4-planet2" src="images/about/time-4-planet2.png" alt=""><img class="na-img-front time-4-planet3" src="images/about/time-4-planet3.png" alt=""></div>
               <div class="na-history__date na-history__date--4"> <span>Сегодня</span></div>
               <div class="na-history__title"><span>машинный интеллект</span></div>
               <div class="na-history__text"> <span>Применяют повсеместно, в том числе для автоматизации маркетинга. Но пока все рассказывают - мы делаем. Результаты наших клиентов: конверсия только с одного канала выросла в 2 раза, а общие продажи в 11 раз.</span></div>
@@ -144,5 +143,79 @@
       </div>
     </footer>
     <script src="js/foundation.js"></script>
+    <script>
+      $(function() {
+          var WIN = window;
+          var DOC = document;
+          var $history = $('.na-history');
+      
+          function getCoords(elem) {
+              var box = elem.getBoundingClientRect();
+      
+              return {
+                  top: box.top + pageYOffset,
+                  left: box.left + pageXOffset
+              };
+      
+          }
+      
+          if ($history.length) {
+      
+              if ($(document).width() > 1279) {
+                  var elemTop = getCoords($history[0]).top;
+      
+                  if (WIN.pageYOffset + WIN.innerHeight > elemTop + 300) {
+                      var t = 2;
+                      var interval = setInterval(function() {
+                          $('#na-history__img--' + t).addClass('showed');
+                          t++;
+                          if (t > 4) {
+                              clearInterval(interval);
+                          }
+                      }, 500);
+                  }
+      
+                  $(WIN).scroll(() => {
+                      if (WIN.pageYOffset + WIN.innerHeight > elemTop + 300) {
+                          var t = 2;
+                          var interval = setInterval(function() {
+                              $('#na-history__img--' + t).addClass('showed');
+                              t++;
+                              if (t > 4) {
+                                  clearInterval(interval);
+                              }
+                          }, 1000);
+                      }
+                  });
+              }
+              else {
+                  var elemTop1 = getCoords(DOC.getElementById('na-history__img--1')).top;
+                  var elemTop2 = getCoords(DOC.getElementById('na-history__img--2')).top;
+                  var elemTop3 = getCoords(DOC.getElementById('na-history__img--3')).top;
+                  var elemTop4 = getCoords(DOC.getElementById('na-history__img--4')).top;
+      
+                  function show() {
+                      if (WIN.pageYOffset + WIN.innerHeight > elemTop1 + 50) {
+                          $('#na-history__img--1').addClass('showed');
+                      }
+                      if (WIN.pageYOffset + WIN.innerHeight > elemTop2 + 150) {
+                          $('#na-history__img--2').addClass('showed');
+                      }
+                      if (WIN.pageYOffset + WIN.innerHeight > elemTop3 + 200) {
+                          $('#na-history__img--3').addClass('showed');
+                      }
+                      if (WIN.pageYOffset + WIN.innerHeight > elemTop4 + 290) {
+                          $('#na-history__img--4').addClass('showed');
+                      }
+                  }
+                  show();
+                  
+                  $(WIN).scroll(() => {
+                      show();
+                  });
+              }
+          }
+      });
+    </script>
   </body>
 </html>

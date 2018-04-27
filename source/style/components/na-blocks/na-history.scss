@@ -1,3 +1,8 @@
+@keyframes circle {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .na-history {
     display: flex;
 
@@ -10,6 +15,7 @@
         height: 30em;
         display: flex;
         margin-bottom: 5.625em;
+        position: relative;
 
         &--1 {
             align-items: flex-end;
@@ -17,12 +23,49 @@
                 width: 5.0625em;
             }
             padding-left: 2.6875em;
+
+            .na-img-back {
+                position: absolute;
+                transition: all 1s;
+            }
+            .na-img-front {
+                position: absolute;
+                opacity: 0;
+                transition: all 1s;
+            }
+            &.showed {
+                .na-img-back {
+                   opacity: 0;
+                }
+                .na-img-front {
+                    opacity: 1;
+                }
+            }
         }
         &--2 {
             align-items: flex-end;
             padding-bottom: 1em;
             img {
                 width: 10em;
+            }
+
+            .na-img-back {
+                position: absolute;
+                transition: all 1s;
+                transform: scale(0.87);
+            }
+            .na-img-front {
+                position: absolute;
+                opacity: 0;
+                transition: all 1s;
+            }
+            &.showed {
+                .na-img-back {
+                    opacity: 0;
+                }
+                .na-img-front {
+                    opacity: 1;
+                }
             }
         }
         &--3 {
@@ -31,11 +74,65 @@
             img {
                 width: 16em;
             }
+
+            .na-img-back {
+                position: absolute;
+                transition: all 1s;
+            }
+            .na-img-front {
+                position: absolute;
+                opacity: 0;
+                transition: all 1s;
+            }
+            &.showed {
+                .na-img-back {
+                    opacity: 0;
+                }
+                .na-img-front {
+                    opacity: 1;
+                }
+            }
         }
         &--4 {
             align-items: center;
             img {
                 width: 20em;
+            }
+
+            .na-img-back {
+                position: absolute;
+                transition: all 1s;
+            }
+            .na-img-front {
+                position: absolute;
+                opacity: 0;
+                transition: all 1s;
+            }
+            &.showed {
+                .na-img-back {
+                   opacity: 0;
+                }
+                .na-img-front {
+                    opacity: 1;
+                }
+            }
+
+            .time-4-orbits {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .time-4-planet1 {
+                animation: circle 4s linear infinite;
+            }
+            .time-4-planet2 {
+                animation: circle 8s linear infinite;
+            }
+            .time-4-planet3 {
+                animation: circle 6s linear infinite;
             }
         }
     }
@@ -106,24 +203,28 @@
             margin-bottom: 1.8125em;
 
             &--1 {
+                height: 5.0625em;
                 img {
                     width: 5.0625em;
                 }
                 padding-left: 0;
             }
             &--2 {
+                height: 10em;
                 padding-bottom: 0;
                 img {
                     width: 10em;
                 }
             }
             &--3 {
+                height: 16em;
                 padding-bottom: 0;
                 img {
                     width: 16em;
                 }
             }
             &--4 {
+                height: 20em;
                 img {
                     width: 20em;
                 }
