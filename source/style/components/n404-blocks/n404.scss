@@ -12,6 +12,7 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     padding: 4.5em 0 8.3125em;
 
@@ -20,9 +21,20 @@ h1, h2 {
         height: 2.0625em;//33px;
     }
 
+    // &__404 {
+    //     max-width: 83.75em;//1340px;
+    //     margin-top: 3.5em;
+    // }
+
     &__404 {
-        max-width: 83.75em;//1340px;
-        margin-top: 3.5em;
+        margin-top: 5em;
+        span {
+            text-shadow: 0 0 120px rgba(#85c1f5, .12);
+            font-size: 31em;//496px
+            font-weight: 700;
+            color: #262a2e;
+            
+        }
     }
 
     &__title {
@@ -41,8 +53,9 @@ h1, h2 {
             color: #b6b9bb;
             font: {
                 size: 1.125em; //18px;
-                weight: 300
+                weight: 300;
             }
+            line-height: 1.4;
         }
         margin: 0;
         margin-top: 1.6875em;//27px
@@ -62,11 +75,55 @@ h1, h2 {
 @media screen and (max-width: 1440px) {
     .n404 {
         font-size: 11px;
+        overflow: hidden;
     }
 }
 
 @media screen and (max-width: 1279px) {
     .n404 {
         font-size: 16px;
+        padding: 1.9375em 0 0;
+
+        &__404 {
+            margin-top: 3.75em;
+            span {
+                text-shadow: 0 0 120px rgba(#85c1f5, .2);
+                font-size: 10em;//496px
+                color: #262a2e;
+            }
+        }
+
+        &__title {
+            span {
+                font: {
+                    size: 1.75em; //28px;
+                }
+            }
+            margin-top: 1.3em; //?
+            padding: 0 1.5em;
+        }
+
+        &__subtitle {
+            span {
+                color: #b6b9bb;
+                font: {
+                    size: 1em; //16px;
+                }
+            }
+            padding: 0 3.5em;
+            margin-top: 2.1875em;// 35px
+        }
+
+        &__btns {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 4.4375em; // 71px
+    
+            a {
+                margin: 0.625em 0;//10px
+            }
+        }
+    
     }
 }

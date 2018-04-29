@@ -1,0 +1,25 @@
+.n404-section-socials {
+    background-color: #262a2e;
+    &__content {
+        margin-top: 5em;
+        padding: 3.125em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-link {
+            width: 5.3125em;
+            height: 5.3125em;
+            &:not(:last-child) {
+                margin-right: 2em;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        svg {
+            fill: #5e6368;
+        }
+    }
+}

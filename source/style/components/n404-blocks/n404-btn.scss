@@ -31,3 +31,11 @@
         opacity: 0.8;
     }
 }   
+
+@media screen and (max-width: 1279px) {
+    .n404-btn {
+        display: flex;
+        width: 12.5em; //200px
+        padding: 0 0;
+    }
+}

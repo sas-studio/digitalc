@@ -4,13 +4,15 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css?2')
-        link(rel="stylesheet" href='style/style.css?24')
+        link(rel="stylesheet" href='style/style.css?25')
        
     body
 
         .n404
             img(src="images/404/n404-logo.svg", alt="").n404__logo
-            img(src="images/404/404.png", alt="").n404__404
+            //- img(src="images/404/404.png", alt="").n404__404
+            .n404__404 
+                span 404
             h1.n404__title 
                 span Извините, страница не найдена
             h2.n404__subtitle 
@@ -20,3 +22,19 @@ html
                     span На главную
                 a(href="#").n404-btn.n404-btn--white Контакты
 
+            section.n404-section-socials.desktop-hidden
+                .n404-section-socials__content
+                    .n-socials.n404-section-socials__socials
+                        a(href="").icon-link.n-socials__link
+                            svg
+                                use(xlink:href="images/sprite.svg#vk")
+                        a(href="").icon-link.n-socials__link.icon-link--fb
+                            svg
+                                use(xlink:href="images/sprite.svg#fb")
+                        a(href="").icon-link.n-socials__link
+                            svg
+                                use(xlink:href="images/sprite.svg#youtube")
+        
+            footer.n404-footer.desktop-hidden
+                .n404-footer__content
+                    span © 2008-2018 Digital Contact
