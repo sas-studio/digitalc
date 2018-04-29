@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PageTitle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style/foundation.css?2">
+    <link rel="stylesheet" href="style/style.css?24">
+  </head>
+  <body>
+    <div class="na-main na-main--header nc-header-shadow">
+      <header class="n-header na-header">
+        <svg class="n-header__logo adaptive-hidden">
+          <use xlink:href="images/sprite.svg#logo-grey"></use>
+        </svg>
+        <svg class="n-header__logo desktop-hidden">
+          <use xlink:href="images/sprite.svg#logo-grey"></use>
+        </svg>
+        <nav class="n-header__nav n-header__nav--grey2 adaptive-hidden"><a class="n-header__nav-link" href="">Платформа</a><a class="n-header__nav-link" href="">Решения</a><a class="n-header__nav-link" href="">Почему мы</a><a class="n-header__nav-link" href="">Компания</a><a class="n-header__nav-link" href="">Ресурсы</a></nav><a class="icon-link icon-link--grey n-header__tel n-header__icon" href="">
+          <svg class="n-slides-link__arrow">
+            <use xlink:href="images/sprite.svg#phone"></use>
+          </svg></a><a class="icon-link icon-link--grey n-header__profile n-header__icon" href="">
+          <svg class="n-slides-link__arrow">
+            <use xlink:href="images/sprite.svg#human"></use>
+          </svg></a><a class="icon-link icon-link--grey n-header__ytube desktop-hidden n-header__icon" href="">
+          <svg class="n-slides-link__arrow">
+            <use xlink:href="images/sprite.svg#youtube-circle"></use>
+          </svg></a><a class="n-header__btn adaptive-hidden n-form-show" href="">
+          <svg>
+            <use xlink:href="images/sprite.svg#youtube-circle"></use>
+          </svg><span>Демо</span></a>
+        <div class="n-header__hamburger"><a class="icon-link icon-link--grey n-header__icon" href="">
+            <svg class="n-slides-link__arrow">
+              <use xlink:href="images/sprite.svg#hamburger"></use>
+            </svg></a></div>
+      </header>
+    </div>
+    <section class="nc-section">
+      <div class="na-main">
+        <h1 class="nc-section__title"><span>Контакты</span></h1>
+        <div class="nc-section__subtitle"><span>Отправьте нам сообщение, и мы оперативно свяжемся с вами.</span><br><span>Хотите что-то узнать немедленно? Звоните: <a href="tel:+74996535312">+7 (499) 653-53-12</a></span></div>
+        <div class="nc-section__blocks">
+          <div>
+            <div class="nc-form"><img class="nc-form__photo" src="images/contacts/mail.svg" alt="">
+              <div class="nc-form__title"><span>Напишите нам</span></div>
+              <div class="nc-form__input">
+                <input class="nc-form__input-place" type="text" required>
+                <!--.nc-form__input-error тут будет текст ошибки-->
+                <div class="nc-form__input-placeholder">ИМЯ*</div>
+                <div class="nc-form__input-close">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#close"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="nc-form__input">
+                <input class="nc-form__input-place" type="email" required>
+                <!--.nc-form__input-error тут будет текст ошибки-->
+                <div class="nc-form__input-placeholder">EMAIL*</div>
+                <div class="nc-form__input-close">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#close"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="nc-form__input">
+                <textarea class="nc-form__input-place" required></textarea>
+                <!--.nc-form__input-error тут будет текст ошибки-->
+                <div class="nc-form__input-placeholder">ВАШЕ СООБЩЕНИЕ*</div>
+                <div class="nc-form__input-close">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#close"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="nc-form__captcha"><img src="images/contacts/captcha.png" alt=""></div>
+              <div class="nc-form__text"><span>Заполняя поле на этой странице, вы даете </span><br><span>
+                   согласие на обработку &nbsp;<a href="">персональных данных</a></span></div>
+            </div>
+          </div>
+          <div>
+            <div class="nc-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in earum expedita, eveniet molestiae et quidem magnam? Sit est voluptatem repudiandae molestiae minima fugit dolores error eum atque? Totam, amet?</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/foundation.js"></script>
+    <script>
+      $(document).ready(function() {
+      
+          $('body').on('click', function(e) {
+      
+              function setPlaceholderPosition() {
+                  $inputs = $('.nc-form__input-place');
+                  for (var i = 0; i < $inputs.length; i++) {
+                      if (!$($inputs[i]).val()) {
+                          var $placeholder = $($inputs[i]).siblings('.nc-form__input-placeholder');
+                          $placeholder.removeClass('n-showed');
+                      }
+                  }
+              }
+              setPlaceholderPosition();
+      
+              if ($(e.target).closest('.nc-form__input-close').length) {
+                  var $input = $(e.target).closest('.nc-form__input').find('.nc-form__input-place');
+                  $input.val('');
+                  setPlaceholderPosition();
+              }
+      
+              $('.nc-form__input-close').removeClass('n-showed');
+      
+              if ($(e.target).is('.nc-form__input-place')) {
+                  var $closeBtn = $(e.target).siblings('.nc-form__input-close');
+                  var $placeholder = $(e.target).siblings('.nc-form__input-placeholder');
+      
+                  if (!$closeBtn.hasClass('n-showed')) {
+                      $closeBtn.addClass('n-showed');
+                  }
+                  if (!$placeholder.hasClass('n-showed')) {
+                      $placeholder.addClass('n-showed');
+                  }
+              }
+          });
+      
+      });
+    </script>
+  </body>
+</html>

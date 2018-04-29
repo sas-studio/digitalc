@@ -1,0 +1,143 @@
+doctype html
+html
+    head
+        title PageTitle
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        link(rel="stylesheet" href='style/foundation.css?2')
+        link(rel="stylesheet" href='style/style.css?24')
+       
+    body
+
+        .na-main.na-main--header.nc-header-shadow
+            header(class=`n-header na-header`)
+
+                svg.n-header__logo.adaptive-hidden
+                    use(xlink:href="images/sprite.svg#logo-grey")
+                svg.n-header__logo.desktop-hidden
+                    use(xlink:href="images/sprite.svg#logo-grey")
+
+                nav.n-header__nav.n-header__nav--grey2.adaptive-hidden
+                    a(href="").n-header__nav-link Платформа
+                    a(href="").n-header__nav-link Решения
+                    a(href="").n-header__nav-link Почему мы
+                    a(href="").n-header__nav-link Компания
+                    a(href="").n-header__nav-link Ресурсы
+
+                a(href="").icon-link.icon-link--grey.n-header__tel.n-header__icon
+                    svg.n-slides-link__arrow
+                        use(xlink:href="images/sprite.svg#phone")
+
+                a(href="").icon-link.icon-link--grey.n-header__profile.n-header__icon
+                    svg.n-slides-link__arrow
+                        use(xlink:href="images/sprite.svg#human")
+
+                a(href="").icon-link.icon-link--grey.n-header__ytube.desktop-hidden.n-header__icon
+                    svg.n-slides-link__arrow
+                        use(xlink:href="images/sprite.svg#youtube-circle")
+
+                a(href="").n-header__btn.adaptive-hidden.n-form-show
+                    svg
+                        use(xlink:href="images/sprite.svg#youtube-circle")
+                    span Демо
+
+                .n-header__hamburger
+                    a(href="").icon-link.icon-link--grey.n-header__icon
+                        svg.n-slides-link__arrow
+                            use(xlink:href="images/sprite.svg#hamburger")
+
+
+        section.nc-section
+            .na-main
+                h1.nc-section__title
+                    span Контакты
+                div.nc-section__subtitle
+                    span Отправьте нам сообщение, и мы оперативно свяжемся с вами.
+                    br
+                    span Хотите что-то узнать немедленно? Звоните: 
+                        a(href="tel:+74996535312") +7 (499) 653-53-12
+                        
+
+                .nc-section__blocks
+                    div
+                        .nc-form
+                            img(src="images/contacts/mail.svg", alt="").nc-form__photo
+                            .nc-form__title
+                                span Напишите нам
+
+                            .nc-form__input
+                                input(type="text" required).nc-form__input-place
+                                //.nc-form__input-error тут будет текст ошибки
+                                .nc-form__input-placeholder ИМЯ*
+                                .nc-form__input-close
+                                    svg
+                                        use(xlink:href="images/sprite.svg#close")
+                            .nc-form__input
+                                input(type="email" required).nc-form__input-place
+                                //.nc-form__input-error тут будет текст ошибки
+                                .nc-form__input-placeholder EMAIL*
+                                .nc-form__input-close
+                                    svg
+                                        use(xlink:href="images/sprite.svg#close")
+                            .nc-form__input
+                                textarea(required).nc-form__input-place
+                                //.nc-form__input-error тут будет текст ошибки
+                                .nc-form__input-placeholder ВАШЕ СООБЩЕНИЕ*
+                                .nc-form__input-close
+                                    svg
+                                        use(xlink:href="images/sprite.svg#close")
+
+                            .nc-form__captcha
+                                img(src="images/contacts/captcha.png", alt="")
+
+                            .nc-form__text
+                                span Заполняя поле на этой странице, вы даете 
+                                br
+                                span 
+                                    | согласие на обработку &nbsp;
+                                    a(href="") персональных данных
+
+                    div
+                        .nc-description
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in earum expedita, eveniet molestiae et quidem magnam? Sit est voluptatem repudiandae molestiae minima fugit dolores error eum atque? Totam, amet?
+
+        script(src='js/foundation.js')
+
+
+        script.
+            $(document).ready(function() {
+
+                $('body').on('click', function(e) {
+
+                    function setPlaceholderPosition() {
+                        $inputs = $('.nc-form__input-place');
+                        for (var i = 0; i < $inputs.length; i++) {
+                            if (!$($inputs[i]).val()) {
+                                var $placeholder = $($inputs[i]).siblings('.nc-form__input-placeholder');
+                                $placeholder.removeClass('n-showed');
+                            }
+                        }
+                    }
+                    setPlaceholderPosition();
+
+                    if ($(e.target).closest('.nc-form__input-close').length) {
+                        var $input = $(e.target).closest('.nc-form__input').find('.nc-form__input-place');
+                        $input.val('');
+                        setPlaceholderPosition();
+                    }
+
+                    $('.nc-form__input-close').removeClass('n-showed');
+
+                    if ($(e.target).is('.nc-form__input-place')) {
+                        var $closeBtn = $(e.target).siblings('.nc-form__input-close');
+                        var $placeholder = $(e.target).siblings('.nc-form__input-placeholder');
+
+                        if (!$closeBtn.hasClass('n-showed')) {
+                            $closeBtn.addClass('n-showed');
+                        }
+                        if (!$placeholder.hasClass('n-showed')) {
+                            $placeholder.addClass('n-showed');
+                        }
+                    }
+                });
+
+            });
