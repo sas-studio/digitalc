@@ -1,0 +1,33 @@
+.n404-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 3.125em;//50px
+    border-radius: 1.5625em;//25px
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 1.875em;//30px
+
+    span {
+        font: {
+            size: 0.875em;//14px;
+            weight: 400;
+        }
+    }
+    
+
+    &--orange {
+        background-color: #e9512b;
+        color: white;
+
+    }
+    &--white {
+        background-color: #fff;
+        color: #262a2e;
+    }
+
+    transition: all 0.25s;
+    &:hover {
+        opacity: 0.8;
+    }
+}   
