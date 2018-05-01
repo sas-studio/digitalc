@@ -4,10 +4,11 @@ h1, h2 {
 }
 
 .nc-section {
+    padding: em(151) 0 em(201);
 
     &__title {
         color: #292929;
-        margin-top: em(151);
+        margin-bottom: 0;
         span {
             font-size: em(72);
             font-weight: 500;

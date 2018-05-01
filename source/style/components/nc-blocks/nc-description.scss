@@ -1,0 +1,48 @@
+.nc-description {
+
+    &__img {
+        width: em(112);
+        margin-bottom: em(29);
+    }
+
+    &__title {
+        color: #525252;
+        letter-spacing: em(2.16);
+        margin-bottom: em(29);
+        text-transform: uppercase;
+        span {
+            font-size: em(18);
+            font-weight: 600;
+        }
+    }
+
+    &__text {
+        color: #686868;
+        line-height: em(28);
+        span {
+            font-size: em(16);
+            font-weight: 400;
+        }
+        a {
+            color: #686868;
+            font-weight: 500;
+        }
+        
+        &--1 {
+            margin-bottom: em(38);
+        }
+        &--2 {
+            margin-bottom: em(55);
+        }
+    }
+
+    &__subtitle {
+        color: #535353;
+        letter-spacing: em(2.16);
+        margin-bottom: em(23);
+        span {
+            font-size: em(18);
+            font-weight: 600;
+        }
+    }
+}

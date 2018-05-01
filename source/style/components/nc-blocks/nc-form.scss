@@ -41,22 +41,44 @@
         }
     }
 
+    &__btn {
+        width: em(200);
+        height: em(50);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff5826;
+        box-shadow: 0 0 em(21) rgba(#101216, .3);
+        border-radius: em(25);
+        margin-top: em(39);
+        cursor: pointer;
+        
+        color: white;
+        letter-spacing: em(4);
+        text-transform: uppercase;
+        span {
+            font-size: em(16);
+            font-weight: 400;
+            
+        }
+    }
+
     &__input {
         position: relative;
         width: 100%;
 
         input, textarea {
             width: 100%;
-            height: 44px;
+            height: em(44);
             border: 0px;
             border-bottom: 1px solid rgba(#9f9ea2, .2);
             background-color: rgba(0,0,0,0);
 
             color: #3c3c3c;
-            font-size: 16px;
+            font-size: em(16);
             font-weight: 400;
             letter-spacing: 2px;
-            padding-right: 20px;
+            padding-right: em(20);
 
             &, & * {
                 transition: all 0.10s;
@@ -72,16 +94,16 @@
         }
 
         textarea {
-            height: 140px;
-            padding-top: 10px;
+            height: em(140);
+            padding-top: em(10);
         }
 
-        margin-bottom: 34px;
+        margin-bottom: em(34);
 
         &-close {
             position: absolute;
             right: 0;
-            top: 9px;
+            top: em(9);
             display: none;
             cursor: pointer;
 
@@ -92,8 +114,8 @@
             }
 
             svg {
-                width: 20px;
-                height: 20px;
+                width: em(20);
+                height: em(20);
                 fill: #d1d6d8;
             }
 
@@ -111,30 +133,40 @@
         &-placeholder {
             position: absolute;
             left: 0;
-            top: 11px;
+            top: em(11);
 
             transition: all 0.10s;
 
             color: #3c3c3c;
-            font-size: 16px;
+            span {
+                font-size: em(16);
+            }
+            
             font-weight: 400;
-            letter-spacing: 2px;
+            letter-spacing: em(2);
 
             cursor: default;
             z-index: 0;
 
             &.n-showed {
                 top: -10px;
-                font-size: 10px;
+                span {
+                    font-size: em(10);
+                }
+                
             }
         }
 
         &-error {
             position: absolute;
-            bottom: -20px;
+            bottom: em(20);
             left: 0;
             color: red;
-            font-size: 12px;
+
+            span {
+                font-size: em(12);
+            }
+            
             font-weight: 100;
             // display: none;
         }

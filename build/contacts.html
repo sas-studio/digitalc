@@ -44,8 +44,9 @@
               <div class="nc-form__title"><span>Напишите нам</span></div>
               <div class="nc-form__input">
                 <input class="nc-form__input-place" type="text" required>
-                <!--.nc-form__input-error тут будет текст ошибки-->
-                <div class="nc-form__input-placeholder">ИМЯ*</div>
+                <!--.nc-form__input-error span тут будет текст ошибки
+                -->
+                <div class="nc-form__input-placeholder"> <span>ИМЯ*</span></div>
                 <div class="nc-form__input-close">
                   <svg>
                     <use xlink:href="images/sprite.svg#close"></use>
@@ -54,8 +55,9 @@
               </div>
               <div class="nc-form__input">
                 <input class="nc-form__input-place" type="email" required>
-                <!--.nc-form__input-error тут будет текст ошибки-->
-                <div class="nc-form__input-placeholder">EMAIL*</div>
+                <!--.nc-form__input-error span тут будет текст ошибки
+                -->
+                <div class="nc-form__input-placeholder"> <span>EMAIL*</span></div>
                 <div class="nc-form__input-close">
                   <svg>
                     <use xlink:href="images/sprite.svg#close"></use>
@@ -64,8 +66,9 @@
               </div>
               <div class="nc-form__input">
                 <textarea class="nc-form__input-place" required></textarea>
-                <!--.nc-form__input-error тут будет текст ошибки-->
-                <div class="nc-form__input-placeholder">ВАШЕ СООБЩЕНИЕ*</div>
+                <!--.nc-form__input-error span тут будет текст ошибки
+                -->
+                <div class="nc-form__input-placeholder"> <span>ВАШЕ СООБЩЕНИЕ*</span></div>
                 <div class="nc-form__input-close">
                   <svg>
                     <use xlink:href="images/sprite.svg#close"></use>
@@ -75,14 +78,27 @@
               <div class="nc-form__captcha"><img src="images/contacts/captcha.png" alt=""></div>
               <div class="nc-form__text"><span>Заполняя поле на этой странице, вы даете </span><br><span>
                    согласие на обработку &nbsp;<a href="">персональных данных</a></span></div>
+              <button class="nc-form__btn" type="submit"> <span>Отправить</span></button>
             </div>
           </div>
           <div>
-            <div class="nc-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in earum expedita, eveniet molestiae et quidem magnam? Sit est voluptatem repudiandae molestiae minima fugit dolores error eum atque? Totam, amet?</div>
+            <div class="nc-description"><img class="nc-description__img" src="images/contacts/d1.png" alt="">
+              <h4 class="nc-description__title"> <span>Digital Contact Европа</span></h4>
+              <div class="nc-description__text nc-description__text--1"><span>ООО ИТ Сервис 115280, Москва, ул. Ленинская Слобода, дом 26с5 </span><br><span>Бизнес-центр «Симонов Плаза» </span><br><span>Служба поддержки и клиентского сервиса: &nbsp;<a href="mailto:support@digitalcontact.com">support@digitalcontact.com</a></span><br><span>Отдел по связям со СМИ: &nbsp;<a href="mailto:marketing@digitalcontact.com">marketing@digitalcontact.com</a></span></div>
+              <div class="nc-description__subtitle"><span>Реквизиты</span></div>
+              <div class="nc-description__text nc-description__text--2"><span>р/сч.: 40702810401100007866 в Банке АО "АЛЬФА-БАНК",</span><br><span>к/сч.: 30101810200000000593 в ОПЕРУ МОСКВА,</span><br><span>БИК: 044525593 </span><br><span>ОГРН:1167746349429</span><br><span>ИНН: 7724359823 </span><br><span>КПП: 772401001</span></div><img class="nc-description__img" src="images/contacts/d2.png" alt="">
+              <h4 class="nc-description__title"> <span>Digital Contact Азия</span></h4>
+              <div class="nc-description__text"><span>SKY NETWORK CORPORATION LIMITED</span><br><span>Office 4, 10/F Kwan Chart Tower No. 6 Tonnochy Road, </span><br><span>Wan Chai Hong Kong info@digitalcontact.com</span></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <footer class="na-footer">
+      <div class="na-main">
+        <div class="na-footer__content"><span>© 2008-2018 Digital Contact</span></div>
+      </div>
+    </footer>
     <script src="js/foundation.js"></script>
     <script>
       $(document).ready(function() {
