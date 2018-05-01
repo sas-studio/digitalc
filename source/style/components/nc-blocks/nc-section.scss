@@ -6,6 +6,44 @@ h1, h2 {
 .nc-section {
     padding: em(151) 0 em(201);
 
+    &__nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        letter-spacing: 1px;
+        color: white;
+        span {
+            font: {
+                size: 0.75em;
+                weight: 500;
+            }
+        }
+        
+        text-transform: uppercase;
+
+        height: 5.0625em;
+        padding-left: em(25);
+        background-color: #f9f9f9;
+
+        span:first-of-type {
+            color: #6e6e6e;
+        }
+        span:last-of-type {
+            color: #bcbcbc;
+        }
+        svg {
+            fill: #6e6e6e;
+        }
+    }
+
+    &__nav-arrow {
+        width: em(12);
+        height: em(8);
+        fill: white;
+        margin: 0 1em;
+    }
+
     &__title {
         color: #292929;
         margin-bottom: 0;
@@ -47,6 +85,44 @@ h1, h2 {
         & > div:last-child {
             width: 50%;
             margin-left: em(73);
+        }
+    }
+}
+
+
+@media screen and (max-width: 1279px) {
+    .nc-section {
+        padding: 0 0 0;
+
+        &__title {
+            margin-top: em(30);
+            padding: 0 em(23);
+            span {
+                font-size: em(42);
+            }
+            text-align: left;
+        }    
+
+        &__subtitle {
+            margin-top: em(31);
+            padding: 0 em(25);
+            span {
+                font-size: em(18);
+            }
+            text-align: left;
+        }
+
+        &__blocks {
+            flex-direction: column;
+            margin-top: em(35);
+            & > div {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            & > div:first-child {
+                justify-content: center;
+            }
         }
     }
 }

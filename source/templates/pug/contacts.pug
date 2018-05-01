@@ -48,12 +48,30 @@ html
 
         section.nc-section
             .na-main
+
+                .nc-section__nav.desktop-hidden
+                    span ГЛАВНАЯ
+                    svg.nc-section__nav-arrow
+                        use(xlink:href="images/sprite.svg#arror-right")
+                    span контакты
+
                 h1.nc-section__title
                     span Контакты
-                div.nc-section__subtitle
+                div.nc-section__subtitle.adaptive-hidden
                     span Отправьте нам сообщение, и мы оперативно свяжемся с вами.
                     br
                     span Хотите что-то узнать немедленно? Звоните: 
+                        a(href="tel:+74996535312") +7 (499) 653-53-12
+                div.nc-section__subtitle.desktop-hidden
+                    span Отправьте нам сообщение,
+                    br
+                    span и мы оперативно свяжемся
+                    br
+                    span с вами. Хотите что-то узнать 
+                    br
+                    span немедленно?
+                    br 
+                    span Звоните: &nbsp;
                         a(href="tel:+74996535312") +7 (499) 653-53-12
                         
 
@@ -150,6 +168,19 @@ html
                                 span Office 4, 10/F Kwan Chart Tower No. 6 Tonnochy Road, 
                                 br 
                                 span Wan Chai Hong Kong info@digitalcontact.com
+
+        section.n404-section-socials.desktop-hidden.n404-section-socials--contacts
+            .n404-section-socials__content
+                .n-socials.n404-section-socials__socials
+                    a(href="").icon-link.n-socials__link
+                        svg
+                            use(xlink:href="images/sprite.svg#vk")
+                    a(href="").icon-link.n-socials__link.icon-link--fb
+                        svg
+                            use(xlink:href="images/sprite.svg#fb")
+                    a(href="").icon-link.n-socials__link
+                        svg
+                            use(xlink:href="images/sprite.svg#youtube")
 
         footer.na-footer
             .na-main

@@ -46,3 +46,23 @@
         }
     }
 }
+
+@media screen and (max-width: 1279px) {
+    .nc-description {
+        padding: em(39) em(25) em(45);
+
+        &__img {
+            width: em(83);
+            margin-bottom: em(32);
+        }
+
+        &__text {
+            &--1 {
+                margin-bottom: em(36);
+            }
+            &--2 {
+                margin-bottom: em(51);
+            }
+        }
+    }
+}

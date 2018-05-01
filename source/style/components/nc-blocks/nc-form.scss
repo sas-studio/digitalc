@@ -1,5 +1,6 @@
 .nc-form {
     width: em(600);
+    max-width: em(600);
     background-color: #f5f5f5;
     padding: em(47) em(106) em(63);
 
@@ -58,8 +59,7 @@
         text-transform: uppercase;
         span {
             font-size: em(16);
-            font-weight: 400;
-            
+            font-weight: 400; 
         }
     }
 
@@ -175,6 +175,23 @@
 
 @media screen and (max-width: 1279px) {
     .nc-form {
+        width: 100%;
+        padding: em(34) em(27) em(45);
+        align-items: flex-start;
+
+        &__photo {
+            width: em(81);
+            margin-bottom: em(22);
+        }
+
+        &__title {
+            margin-bottom: em(49);
+            span {
+                font-size: em(22);
+            }
+            letter-spacing: em(0.88);
+        }
+
         &__input {
             input {
                 font-size: 14px;
@@ -184,6 +201,25 @@
             &-placeholder {
                 font-size: 14px;
             }
+
+            textarea {
+                height: em(70);
+            }
+        }
+
+        &__captcha {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        &__text {
+            text-align: left;
+            margin-top: em(24);
+        }
+
+        &__btn {
+            margin-top: em(26);
         }
     }
 }
