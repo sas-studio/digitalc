@@ -1,0 +1,155 @@
+h1, h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.n404 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+
+    background-color: #262a2e;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+    padding: 4.5em 0 8.3125em;
+
+    &__logo {
+        width: 2.0625em;//33px;
+        height: 2.0625em;//33px;
+    }
+
+    // &__404 {
+    //     max-width: 83.75em;//1340px;
+    //     margin-top: 3.5em;
+    // }
+
+    &__404 {
+        margin-top: 5em;
+        span {
+            text-shadow: 0 0 120px rgba(#85c1f5, .12);
+            font-size: 31em;//496px
+            font-weight: 700;
+            color: #262a2e;
+            
+        }
+    }
+
+    &__title {
+        span {
+            font: {
+                size: 3em; //48px;
+                weight: 500
+            }
+        }
+        margin: 0;
+        margin-top: 1.3em;
+    }
+
+    &__subtitle {
+        span {
+            color: #b6b9bb;
+            font: {
+                size: 1.125em; //18px;
+                weight: 300;
+            }
+            line-height: 1.4;
+        }
+        margin: 0;
+        margin-top: 1.6875em;//27px
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.1875em; // 50px
+
+        a {
+            margin: 0 0.375em;//6px
+        }
+    }
+}
+
+
+@media screen and (max-height: 700px) and (min-width: 1278px) {
+    .n404 {
+        justify-content: space-between;
+        height: 100vh;
+        
+        &__404 {
+            span {
+                font-size: 15em;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 500px) and (min-width: 1278px) {
+    .n404 {
+        &__404 {
+            span {
+                font-size: 8em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .n404 {
+        font-size: 11px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .n404 {
+        font-size: 16px;
+        padding: 1.9375em 0 0;
+
+        &__404 {
+            margin-top: 3.75em;
+            span {
+                text-shadow: 0 0 120px rgba(#85c1f5, .2);
+                font-size: 10em;//496px
+                color: #262a2e;
+            }
+        }
+
+        &__title {
+            span {
+                font: {
+                    size: 1.75em; //28px;
+                }
+            }
+            margin-top: 1.3em; //?
+            padding: 0 1.5em;
+        }
+
+        &__subtitle {
+            span {
+                color: #b6b9bb;
+                font: {
+                    size: 1em; //16px;
+                }
+            }
+            padding: 0 3.5em;
+            margin-top: 2.1875em;// 35px
+        }
+
+        &__btns {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 4.4375em; // 71px
+    
+            a {
+                margin: 0.625em 0;//10px
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,128 @@
+h1, h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.nc-section {
+    padding: em(101) 0 em(201);
+
+    &__nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        letter-spacing: 1px;
+        color: white;
+        span {
+            font: {
+                size: 0.75em;
+                weight: 500;
+            }
+        }
+        
+        text-transform: uppercase;
+
+        height: 5.0625em;
+        padding-left: em(25);
+        background-color: #f9f9f9;
+
+        span:first-of-type {
+            color: #6e6e6e;
+        }
+        span:last-of-type {
+            color: #bcbcbc;
+        }
+        svg {
+            fill: #6e6e6e;
+        }
+    }
+
+    &__nav-arrow {
+        width: em(12);
+        height: em(8);
+        fill: white;
+        margin: 0 1em;
+    }
+
+    &__title {
+        color: #292929;
+        margin-bottom: 0;
+        span {
+            font-size: em(72);
+            font-weight: 500;
+        }
+        text-align: center;
+        letter-spacing: em(2.88);
+    }
+
+    &__subtitle {
+        color: #616161;
+        margin-top: em(48);
+        span {
+            font-size: em(18);
+            font-weight: 400;
+        }
+        text-align: center;
+        line-height: em(26);
+
+        a {
+            color: #ff5826;
+        }
+    }
+
+    &__blocks {
+        display: flex;
+        justify-content: center;
+        margin-top: em(94);
+
+        & > div:first-child {
+            width: 50%;
+            margin-right: em(73);
+
+            display: flex;
+            justify-content: flex-end;
+        }
+        & > div:last-child {
+            width: 50%;
+            margin-left: em(73);
+        }
+    }
+}
+
+
+@media screen and (max-width: 1279px) {
+    .nc-section {
+        padding: 0 0 0;
+
+        &__title {
+            margin-top: em(30);
+            padding: 0 em(23);
+            span {
+                font-size: em(42);
+            }
+            text-align: left;
+        }    
+
+        &__subtitle {
+            margin-top: em(31);
+            padding: 0 em(25);
+            span {
+                font-size: em(18);
+            }
+            text-align: left;
+        }
+
+        &__blocks {
+            flex-direction: column;
+            margin-top: em(35);
+            & > div {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            & > div:first-child {
+                justify-content: center;
+            }
+        }
+    }
+}

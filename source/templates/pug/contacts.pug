@@ -1,0 +1,232 @@
+doctype html
+html
+    head
+        title PageTitle
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        link(rel="stylesheet" href='style/foundation.css?2')
+        link(rel="stylesheet" href='style/style.css?31')
+       
+    body
+
+        .na-main.na-main--header.nc-header-shadow
+            header(class=`n-header na-header`)
+
+                svg.n-header__logo.adaptive-hidden
+                    use(xlink:href="images/sprite.svg#logo-grey")
+                svg.n-header__logo.desktop-hidden
+                    use(xlink:href="images/sprite.svg#logo-grey")
+
+                nav.n-header__nav.n-header__nav--grey2.adaptive-hidden
+                    a(href="").n-header__nav-link Платформа
+                    a(href="").n-header__nav-link Решения
+                    a(href="").n-header__nav-link Почему мы
+                    a(href="").n-header__nav-link Компания
+                    a(href="").n-header__nav-link Ресурсы
+
+                a(href="").icon-link.icon-link--grey.n-header__tel.n-header__icon
+                    svg.n-slides-link__arrow
+                        use(xlink:href="images/sprite.svg#phone")
+
+                a(href="").icon-link.icon-link--grey.n-header__profile.n-header__icon
+                    svg.n-slides-link__arrow
+                        use(xlink:href="images/sprite.svg#human")
+
+                a(href="").icon-link.icon-link--grey.n-header__ytube.desktop-hidden.n-header__icon
+                    svg.n-slides-link__arrow
+                        use(xlink:href="images/sprite.svg#youtube-circle")
+
+                a(href="").n-header__btn.adaptive-hidden.n-form-show
+                    svg
+                        use(xlink:href="images/sprite.svg#youtube-circle")
+                    span Демо
+
+                .n-header__hamburger
+                    a(href="").icon-link.icon-link--grey.n-header__icon
+                        svg.n-slides-link__arrow
+                            use(xlink:href="images/sprite.svg#hamburger")
+
+
+        section.nc-section
+            .na-main
+
+                .nc-section__nav.desktop-hidden
+                    span ГЛАВНАЯ
+                    svg.nc-section__nav-arrow
+                        use(xlink:href="images/sprite.svg#arror-right")
+                    span контакты
+
+                h1.nc-section__title
+                    span Контакты
+                div.nc-section__subtitle.adaptive-hidden
+                    span Отправьте нам сообщение, и мы оперативно свяжемся с вами.
+                    br
+                    span Хотите что-то узнать немедленно? Звоните: 
+                        a(href="tel:+74996535312") +7 (499) 653-53-12
+                div.nc-section__subtitle.desktop-hidden
+                    span Отправьте нам сообщение,
+                    br
+                    span и мы оперативно свяжемся
+                    br
+                    span с вами. Хотите что-то узнать 
+                    br
+                    span немедленно?
+                    br 
+                    span Звоните: &nbsp;
+                        a(href="tel:+74996535312") +7 (499) 653-53-12
+                        
+
+                .nc-section__blocks
+                    div
+                        .nc-form
+                            img(src="images/contacts/mail.svg", alt="").nc-form__photo
+                            .nc-form__title
+                                span Напишите нам
+
+                            .nc-form__input
+                                input(type="text" required).nc-form__input-place
+                                //.nc-form__input-error 
+                                    span тут будет текст ошибки
+                                .nc-form__input-placeholder 
+                                    span ИМЯ*
+                                .nc-form__input-close
+                                    svg
+                                        use(xlink:href="images/sprite.svg#close")
+                            .nc-form__input
+                                input(type="email" required).nc-form__input-place
+                                //.nc-form__input-error 
+                                    span тут будет текст ошибки
+                                .nc-form__input-placeholder 
+                                    span EMAIL*
+                                .nc-form__input-close
+                                    svg
+                                        use(xlink:href="images/sprite.svg#close")
+                            .nc-form__input
+                                textarea(required).nc-form__input-place
+                                //.nc-form__input-error 
+                                    span тут будет текст ошибки
+                                .nc-form__input-placeholder 
+                                    span ВАШЕ СООБЩЕНИЕ*
+                                .nc-form__input-close
+                                    svg
+                                        use(xlink:href="images/sprite.svg#close")
+
+                            .nc-form__captcha
+                                img(src="images/contacts/captcha.png", alt="")
+
+                            .nc-form__text
+                                span Заполняя поле на этой странице, вы даете 
+                                br
+                                span 
+                                    | согласие на обработку &nbsp;
+                                    a(href="") персональных данных
+
+                            button(type="submit").nc-form__btn 
+                                span Отправить
+
+                    div
+                        .nc-description
+                            img(src="images/contacts/d1.png", alt="").nc-description__img
+
+                            h4.nc-description__title 
+                                span Digital Contact Европа
+
+                            .nc-description__text.nc-description__text--1
+                                span ООО ИТ Сервис 115280, Москва, ул. Ленинская Слобода, дом 26с5 
+                                br
+                                span Бизнес-центр «Симонов Плаза» 
+                                br
+                                span Служба поддержки и клиентского сервиса: &nbsp;
+                                    a(href="mailto:support@digitalcontact.com") support@digitalcontact.com
+                                br
+                                span Отдел по связям со СМИ: &nbsp;
+                                    a(href="mailto:marketing@digitalcontact.com") marketing@digitalcontact.com
+
+                            .nc-description__subtitle
+                                span Реквизиты
+
+                            .nc-description__text.nc-description__text--2
+                                span р/сч.: 40702810401100007866 в Банке АО "АЛЬФА-БАНК",
+                                br
+                                span к/сч.: 30101810200000000593 в ОПЕРУ МОСКВА,
+                                br
+                                span БИК: 044525593 
+                                br
+                                span ОГРН:1167746349429
+                                br
+                                span ИНН: 7724359823 
+                                br
+                                span КПП: 772401001
+
+                            img(src="images/contacts/d2.png", alt="").nc-description__img
+
+                            h4.nc-description__title 
+                                span Digital Contact Азия
+
+                            .nc-description__text
+                                span SKY NETWORK CORPORATION LIMITED
+                                br 
+                                span Office 4, 10/F Kwan Chart Tower No. 6 Tonnochy Road, 
+                                br 
+                                span Wan Chai Hong Kong &nbsp;
+                                    a(href="mailto:info@digitalcontact.com") info@digitalcontact.com
+
+        section.n404-section-socials.desktop-hidden.n404-section-socials--contacts
+            .n404-section-socials__content
+                .n-socials.n404-section-socials__socials
+                    a(href="").icon-link.n-socials__link
+                        svg
+                            use(xlink:href="images/sprite.svg#vk")
+                    a(href="").icon-link.n-socials__link.icon-link--fb
+                        svg
+                            use(xlink:href="images/sprite.svg#fb")
+                    a(href="").icon-link.n-socials__link
+                        svg
+                            use(xlink:href="images/sprite.svg#youtube")
+
+        footer.na-footer
+            .na-main
+                .na-footer__content
+                    span © 2008-2018 Digital Contact
+
+
+        script(src='js/foundation.js')
+
+
+        script.
+            $(document).ready(function() {
+
+                $('body').on('click', function(e) {
+
+                    function setPlaceholderPosition() {
+                        $inputs = $('.nc-form__input-place');
+                        for (var i = 0; i < $inputs.length; i++) {
+                            if (!$($inputs[i]).val()) {
+                                var $placeholder = $($inputs[i]).siblings('.nc-form__input-placeholder');
+                                $placeholder.removeClass('n-showed');
+                            }
+                        }
+                    }
+                    setPlaceholderPosition();
+
+                    if ($(e.target).closest('.nc-form__input-close').length) {
+                        var $input = $(e.target).closest('.nc-form__input').find('.nc-form__input-place');
+                        $input.val('');
+                        setPlaceholderPosition();
+                    }
+
+                    $('.nc-form__input-close').removeClass('n-showed');
+
+                    if ($(e.target).is('.nc-form__input-place')) {
+                        var $closeBtn = $(e.target).siblings('.nc-form__input-close');
+                        var $placeholder = $(e.target).siblings('.nc-form__input-placeholder');
+
+                        if (!$closeBtn.hasClass('n-showed')) {
+                            $closeBtn.addClass('n-showed');
+                        }
+                        if (!$placeholder.hasClass('n-showed')) {
+                            $placeholder.addClass('n-showed');
+                        }
+                    }
+                });
+
+            });
