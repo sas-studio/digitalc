@@ -1,0 +1,35 @@
+.subnav {
+    position: relative;
+    margin-right: 2.39664469%;
+
+    &__menu {
+        position: absolute;
+        top: 1.5em;
+        left: -13px;
+
+        background-color: #2c353c;
+        padding: 13px;
+
+        display: none;
+    }
+
+    &__link {
+        display: block;
+        color: white;
+        font: {
+            size: 1.25em;
+            weight: 400;
+        }
+        text: {
+            decoration: none;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

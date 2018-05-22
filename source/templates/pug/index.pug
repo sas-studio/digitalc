@@ -4,7 +4,7 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css?2')
-        link(rel="stylesheet" href='style/style.css?19')
+        link(rel="stylesheet" href='style/style.css?25')
         //- link(rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css')
     body
         //- .n-video
@@ -32,7 +32,12 @@ html
                                 use(xlink:href="images/sprite.svg#logo-grey")
 
                             nav.n-header__nav.adaptive-hidden
-                                a(href="").n-header__nav-link Платформа
+                                .subnav
+                                    a(href="").n-header__nav-link Платформа
+                                    .subnav__menu
+                                        a.subnav__link(href="") PRO
+                                        a.subnav__link(href="") Lite
+                                        a.subnav__link(href="") Exchange
                                 a(href="").n-header__nav-link Решения
                                 a(href="").n-header__nav-link Почему мы
                                 a(href="").n-header__nav-link Компания
@@ -115,7 +120,12 @@ html
                                 use(xlink:href="images/sprite.svg#logo-small")
 
                             nav.n-header__nav
-                                a(href="").n-header__nav-link Платформа
+                                .subnav
+                                    a(href="").n-header__nav-link Платформа
+                                    .subnav__menu
+                                        a.subnav__link(href="") PRO
+                                        a.subnav__link(href="") Lite
+                                        a.subnav__link(href="") Exchange
                                 a(href="").n-header__nav-link Решения
                                 a(href="").n-header__nav-link Почему мы
                                 a(href="").n-header__nav-link Компания
@@ -190,7 +200,12 @@ html
                                 use(xlink:href="images/sprite.svg#logo-small")
 
                             nav.n-header__nav.n-header__nav--grey
-                                a(href="").n-header__nav-link Платформа
+                                .subnav
+                                    a(href="").n-header__nav-link Платформа
+                                    .subnav__menu
+                                        a.subnav__link(href="") PRO
+                                        a.subnav__link(href="") Lite
+                                        a.subnav__link(href="") Exchange
                                 a(href="").n-header__nav-link Решения
                                 a(href="").n-header__nav-link Почему мы
                                 a(href="").n-header__nav-link Компания
@@ -264,7 +279,12 @@ html
                                 use(xlink:href="images/sprite.svg#logo-grey")
 
                             nav.n-header__nav.n-header__nav--grey2
-                                a(href="").n-header__nav-link Платформа
+                                .subnav
+                                    a(href="").n-header__nav-link Платформа
+                                    .subnav__menu
+                                        a.subnav__link(href="") PRO
+                                        a.subnav__link(href="") Lite
+                                        a.subnav__link(href="") Exchange
                                 a(href="").n-header__nav-link Решения
                                 a(href="").n-header__nav-link Почему мы
                                 a(href="").n-header__nav-link Компания
@@ -338,7 +358,12 @@ html
                                 use(xlink:href="images/sprite.svg#logo-grey")
 
                             nav.n-header__nav.n-header__nav--grey2
-                                a(href="").n-header__nav-link Платформа
+                                .subnav
+                                    a(href="").n-header__nav-link Платформа
+                                    .subnav__menu
+                                        a.subnav__link(href="") PRO
+                                        a.subnav__link(href="") Lite
+                                        a.subnav__link(href="") Exchange
                                 a(href="").n-header__nav-link Решения
                                 a(href="").n-header__nav-link Почему мы
                                 a(href="").n-header__nav-link Компания
@@ -720,5 +745,17 @@ html
                         }
                     }
                 });
+
+
+
+                // header nav
+                $('.subnav').hover(
+                    function() {
+                        $(this).find('.subnav__menu').stop().slideDown();
+                    },
+                    function() {
+                        $(this).find('.subnav__menu').stop().slideUp();
+                    }
+                );
 
             });
