@@ -106,6 +106,10 @@
             margin-right: 0;
             margin-bottom: 0;
             padding: em(25);
+
+            &:hover {
+                background-color: rgba(#fff, 0);
+            }
         }
 
         &__img {
