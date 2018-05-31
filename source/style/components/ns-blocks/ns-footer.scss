@@ -126,9 +126,6 @@
             letter-spacing: 2px;
         }
 
-
-        margin-right: 3.8945476%;//65px;
-
         svg {
             width: 0.9375em; //15px
             height: 0.9375em; //15px
@@ -151,5 +148,74 @@
         align-items: center;
 
         padding: em(42) 0;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .ns-footer {
+        .na-main {
+            padding: 0 em(25);
+        }
+
+        &__top {
+            flex-direction: column;
+            padding: em(35) 0 0;
+        }
+
+        &__block {
+            width: 100%;
+            margin-bottom: em(15);
+            margin-right: 0;
+
+            &--socials {
+                margin-bottom: em(40);
+            }
+
+            &--enter, &--demo {
+                width: 50%;
+            }
+
+            &--demo {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        &__middle {
+            flex-wrap: wrap;
+        }
+
+        &__socials {
+            justify-content: space-between;
+            width: em(330);
+
+            .icon-link {
+                width: em(87);
+                height: em(87);
+                margin-right: 0;
+
+                svg {
+                    fill: #b2c2cd;
+                }
+            }
+        }
+
+        &__tel-block {
+            align-items: center;
+            margin-bottom: em(50);
+        }
+
+        &__tel-number {
+            font-size: em(26);
+        }
+        &__tel-desk {
+            span {
+                font-size: em(16);
+            }
+        }
+
+        &__bottom {
+            flex-direction: column;
+        }
     }
 }
