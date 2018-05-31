@@ -8,7 +8,7 @@ html
 
     body
 
-        .na-main.na-main--header
+        .na-main.na-main--header.ns-header
             header(class=`n-header na-header`)
 
                 svg.n-header__logo.adaptive-hidden
@@ -18,7 +18,14 @@ html
 
                 nav.n-header__nav.n-header__nav--grey2.adaptive-hidden
                     a(href="").n-header__nav-link Платформа
-                    a(href="").n-header__nav-link Решения
+                    .ns-subnav
+                        a(href="").n-header__nav-link Решения
+                        .ns-subnav__menu
+                            a.ns-subnav__link(href="") Управление достовляемостью
+                            a.ns-subnav__link(href="") Лид-менеджмент
+                            a.ns-subnav__link(href="") Email авторизация
+                            a.ns-subnav__link(href="") Ecommerce авторизация
+                            a.ns-subnav__link(href="") Комплексные решения
                     a(href="").n-header__nav-link Почему мы
                     a(href="").n-header__nav-link Компания
                     a(href="").n-header__nav-link Ресурсы
@@ -234,5 +241,127 @@ html
                     span © 2008-2018 Digital Contact
 
 
+        .n-modal#n-modal(style="display: none;")
+            .n-modal__close#n-modal__close
+                svg
+                    use(xlink:href="images/sprite.svg#close")
+            .n-modal__content
+
+                .n-modal__find
+                    svg
+                        use(xlink:href="images/sprite.svg#search")
+                    input(type="text")
+
+                .n-modal__list.n-modal-list
+                    .n-modal-list__first
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Платформа
+                            .n-modal-list__link
+                                a(href="") Lite
+                            .n-modal-list__link
+                                a(href="") Pro
+                            .n-modal-list__link
+                                a(href="") Exchange
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Решения
+                            .n-modal-list__link
+                                a(href="") Лид-менеджмент
+                            .n-modal-list__link
+                                a(href="") Email автоматизация
+                            .n-modal-list__link
+                                a(href="") Ecommerce автоматизация
+                            .n-modal-list__link
+                                a(href="") Работа с клиентской базой
+                            .n-modal-list__link
+                                a(href="") Комплексные решения
+
+                    .n-modal-list__middle
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Почему мы
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Компания
+                            .n-modal-list__link
+                                a(href="") О компании
+                            .n-modal-list__link
+                                a(href="") Новости/CМИ
+                            .n-modal-list__link
+                                a(href="") Клиенты
+                            .n-modal-list__link
+                                a(href="") Контакты
+
+                    .n-modal-list__last
+                        .n-modal-list__block
+                            .n-modal-list__title
+                                span Ресурсы
+                            .n-modal-list__link
+                                a(href="") База знаний
+                            .n-modal-list__link
+                                a(href="") Вебинары
+                            .n-modal-list__link
+                                a(href="") API
+                        .n-modal-list__block
+                            .n-modal-list__link
+                                a(href="") Защита персональных данных 152-ФЗ
+                            .n-modal-list__link
+                                a(href="") АнтиСпам соглашение
+                            .n-modal-list__link
+                                a(href="") Политика конфиденциальности
+                            .n-modal-list__link
+                                a(href="") Условия использования сервиса
+                            .n-modal-list__link
+                                a(href="") Обработка персональных данных
+
+                .n-modal__footer.n-modal-footer
+                    .n-modal-footer__left
+                        .n-modal-footer__btns
+                            a(href="").n-modal-footer__btn
+                                .icon-link.icon-link--blue
+                                    svg
+                                        use(xlink:href="images/sprite.svg#human")
+                                span Вход
+                            a(href="").n-modal-footer__btn
+                                .icon-link.icon-link--blue
+                                    .icon-link__text +
+                                span Регистрация
+                    .n-modal-footer__right
+                        .n-socials.n-modal-footer__socials
+                            a(href="").icon-link.n-socials__link.n-socials__link--darkgrey
+                                svg
+                                    use(xlink:href="images/sprite.svg#vk")
+                            a(href="").icon-link.n-socials__link.icon-link--fb.n-socials__link--darkgrey
+                                svg
+                                    use(xlink:href="images/sprite.svg#fb")
+                            a(href="").icon-link.n-socials__link.n-socials__link--darkgrey
+                                svg
+                                    use(xlink:href="images/sprite.svg#youtube")
+
+
         script(src='js/foundation.js')
+        script.
+            // menu
+            $('.n-header__hamburger').on('click', function(e) {
+                e.preventDefault();
+                $('#n-modal').fadeIn(200);
+                $(document).width() < 1279 && $('body').css('overflow', 'hidden');
+
+            });
+            $('#n-modal__close').on('click', function(e) {
+                e.preventDefault();
+                $('#n-modal').fadeOut(200);
+                $(document).width() < 1279 && $('body').css('overflow', 'auto');
+            });
+
+            // header nav
+            $('.ns-subnav').hover(
+                function() {
+                    $(this).find('.ns-subnav__menu').stop().slideDown();
+                },
+                function() {
+                    $(this).find('.ns-subnav__menu').stop().slideUp();
+                }
+            );
 
