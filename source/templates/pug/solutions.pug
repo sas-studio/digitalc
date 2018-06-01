@@ -4,7 +4,7 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css?2')
-        link(rel="stylesheet" href='style/style.css?31')
+        link(rel="stylesheet" href='style/style.css?32')
 
     body
 
@@ -17,7 +17,12 @@ html
                     use(xlink:href="images/sprite.svg#logo-grey")
 
                 nav.n-header__nav.n-header__nav--grey2.adaptive-hidden
-                    a(href="").n-header__nav-link Платформа
+                    .ns-subnav
+                        a(href="").n-header__nav-link Платформа
+                        .ns-subnav__menu
+                            a.ns-subnav__link(href="") DC Pro
+                            a.ns-subnav__link(href="") DC Lite
+                            a.ns-subnav__link(href="") DC Exchange
                     .ns-subnav
                         a(href="").n-header__nav-link Решения
                         .ns-subnav__menu
@@ -27,8 +32,20 @@ html
                             a.ns-subnav__link(href="") Ecommerce авторизация
                             a.ns-subnav__link(href="") Комплексные решения
                     a(href="").n-header__nav-link Почему мы
-                    a(href="").n-header__nav-link Компания
-                    a(href="").n-header__nav-link Ресурсы
+                    .ns-subnav
+                        a(href="").n-header__nav-link Компания
+                        .ns-subnav__menu
+                            a.ns-subnav__link(href="") О компании
+                            a.ns-subnav__link(href="") Контакты
+                    .ns-subnav
+                        a(href="").n-header__nav-link Ресурсы
+                        .ns-subnav__menu
+                            a.ns-subnav__link(href="") Блог
+                            a.ns-subnav__link(href="") База знаний
+                            a.ns-subnav__link(href="") Вебинары
+                            a.ns-subnav__link(href="") Api
+                            a.ns-subnav__link(href="") Транзакционное Api
+                            a.ns-subnav__link(href="") Интеграция с сервисами
 
                 a(href="").icon-link.icon-link--grey.n-header__tel.n-header__icon
                     svg.n-slides-link__arrow
