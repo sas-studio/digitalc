@@ -1,0 +1,37 @@
+.ns-subnav {
+    position: relative;
+    margin-right: 2.39664469%;
+
+    &__menu {
+        position: absolute;
+        top: 3.7em;
+        left: -15px;
+
+        background-color: #fff;
+        padding: 15px;
+
+        display: none;
+    }
+
+    &__link {
+        white-space: nowrap;
+
+        display: block;
+        color: #a2acb3;
+        font: {
+            size: 1em;
+            weight: 400;
+        }
+        text: {
+            decoration: none;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.25em;
+        }
+
+        &:hover {
+            color: #4a5258;
+        }
+    }
+}
